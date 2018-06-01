@@ -1,0 +1,15 @@
+mixin header()
+  header.c-header
+    .c-header__logo
+      img(src=paths.img + "header-logo.png")
+      .c-header__border
+    .c-header__menu
+      ul
+        each item, index in headerMenu
+          if(index < headerMenu.length - 1)
+            li.
+              <a href="javascript:void(0);">#{item.txt}</a>&nbsp;／&nbsp;
+          else
+            li
+              a(href="javascript:void(0);")
+      .c-header__border

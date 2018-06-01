@@ -1,0 +1,18 @@
+{
+  "app":{
+    "name":"browser title",
+    "description": "meta description",
+    "keywords": "meta keywords"
+  },
+  "headerMenu":[
+    {
+      "txt": "中国新势力X-Force"
+    },
+    {
+      "txt": "宝沃德车主"
+    },
+    {
+      "txt": "宝沃安全未来"
+    }
+  ]
+}

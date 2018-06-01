@@ -1,0 +1,53 @@
+.c-header
+  position relative
+  height 80px
+  &__border
+    height 10px
+    width 100%
+    position absolute
+    bottom 0
+    right 0
+  &__logo
+    position relative
+    background black
+    height 100%
+    padding 10px 0 10px 40px
+    img
+      height calc(100% - 10px)
+    .c-header__border
+      background $col-athens-grey
+  &__menu
+    position absolute
+    padding 20px
+    background $col-athens-grey
+    right 0
+    top 0
+    width 70%
+    height 100%
+    &:before
+      content ""
+      width 0px
+      height 0px
+      position absolute
+      left 0
+      top 0
+      border-top 80px solid black
+      border-right 40px solid transparent
+    .c-header__border
+      background black
+      &:before
+        content ""
+        width 0px
+        height 0px
+        position absolute
+        left 0
+        top 0
+        border-top 10px solid $col-athens-grey
+        border-right 5px solid transparent
+    ul
+      display flex
+      li
+        list-style-type none
+        a
+          color black
+          font-size 0.8rem
