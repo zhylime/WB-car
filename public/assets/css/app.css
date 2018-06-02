@@ -1,3 +1,12 @@
+.bg-lily-white {
+  background: #e9eeeb;
+}
+html,
+body,
+* {
+  padding: 0;
+  margin: 0;
+}
 html,
 body {
   height: 100%;
@@ -7,14 +16,21 @@ h1 {
 }
 ul,
 li {
-  list-stype-type: none;
+  list-style-type: none;
+}
+section {
+  height: 100%;
+}
+.l-w--100p {
+  width: 100%;
 }
 .c-header {
-  position: relative;
-  height: 80px;
+  position: absolute;
+  height: 60px;
+  width: 100%;
 }
 .c-header__border {
-  height: 10px;
+  height: 6px;
   width: 100%;
   position: absolute;
   bottom: 0;
@@ -38,7 +54,7 @@ li {
   background: #dcdddd;
   right: 0;
   top: 0;
-  width: 70%;
+  width: 80%;
   height: 100%;
 }
 .c-header__menu:before {
@@ -48,8 +64,8 @@ li {
   position: absolute;
   left: 0;
   top: 0;
-  border-top: 80px solid #000;
-  border-right: 40px solid transparent;
+  border-top: 60px solid #000;
+  border-right: 32px solid transparent;
 }
 .c-header__menu .c-header__border {
   background: #000;
@@ -61,16 +77,20 @@ li {
   position: absolute;
   left: 0;
   top: 0;
-  border-top: 10px solid #dcdddd;
-  border-right: 5px solid transparent;
+  border-top: 8px solid #dcdddd;
+  border-right: 4px solid transparent;
 }
 .c-header__menu ul {
   display: flex;
+  padding-left: 20px;
+  position: absolute;
+  top: calc(50% - 7px);
+  transform: translateY(-50%);
 }
 .c-header__menu ul li {
   list-style-type: none;
 }
 .c-header__menu ul li a {
   color: #000;
-  font-size: 0.8rem;
+  font-size: 0.6rem;
 }

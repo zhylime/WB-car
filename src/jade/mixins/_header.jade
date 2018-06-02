@@ -7,9 +7,10 @@ mixin header()
       ul
         each item, index in headerMenu
           if(index < headerMenu.length - 1)
+            - console.log(index)
             li.
               <a href="javascript:void(0);">#{item.txt}</a>&nbsp;／&nbsp;
           else
             li
-              a(href="javascript:void(0);")
+              a(href="javascript:void(0);")!= item.txt
       .c-header__border
