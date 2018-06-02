@@ -21,6 +21,11 @@ li {
 section {
   height: 100%;
 }
+.pos-abs {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
 .l-w--100p {
   width: 100%;
 }
