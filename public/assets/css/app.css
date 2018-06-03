@@ -48,6 +48,63 @@ section {
   z-index: 99;
   background: url("../img/icon-flip.jpg");
   background-size: 100% 100%;
+  animation: flipIconAnimation 1.5s infinite;
+}
+@-moz-keyframes flipIconAnimation {
+  0% {
+    width: 40px;
+    height: 40px;
+  }
+  50% {
+    width: 30px;
+    height: 30px;
+  }
+  100% {
+    width: 40px;
+    height: 40px;
+  }
+}
+@-webkit-keyframes flipIconAnimation {
+  0% {
+    width: 40px;
+    height: 40px;
+  }
+  50% {
+    width: 30px;
+    height: 30px;
+  }
+  100% {
+    width: 40px;
+    height: 40px;
+  }
+}
+@-o-keyframes flipIconAnimation {
+  0% {
+    width: 40px;
+    height: 40px;
+  }
+  50% {
+    width: 30px;
+    height: 30px;
+  }
+  100% {
+    width: 40px;
+    height: 40px;
+  }
+}
+@keyframes flipIconAnimation {
+  0% {
+    width: 40px;
+    height: 40px;
+  }
+  50% {
+    width: 30px;
+    height: 30px;
+  }
+  100% {
+    width: 40px;
+    height: 40px;
+  }
 }
 .c-header {
   position: absolute;
