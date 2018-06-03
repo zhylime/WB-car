@@ -1,8 +1,14 @@
 $(document).ready(function(){
-  console.log('doc ready');
+  // console.log('doc ready');
 
   loadFlipBook();
 
+  $('.js-flip-btn').on('click touchend', function(e){
+  	e.preventDefault();
+  	$(this).hide();
+  	$(".js-flip-book").turn('next');
+  	$(this).fadeIn();
+  });
 	function loadFlipBook(){
 		let w = $(window).width();
 		let h = $(window).height();

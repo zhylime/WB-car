@@ -1,10 +1,16 @@
 'use strict';
 
 $(document).ready(function () {
-	console.log('doc ready');
+	// console.log('doc ready');
 
 	loadFlipBook();
 
+	$('.js-flip-btn').on('click touchend', function (e) {
+		e.preventDefault();
+		$(this).hide();
+		$(".js-flip-book").turn('next');
+		$(this).fadeIn();
+	});
 	function loadFlipBook() {
 		var w = $(window).width();
 		var h = $(window).height();
