@@ -202,9 +202,6 @@ ul,
 li {
   list-style-type: none;
 }
-section {
-  height: 100%;
-}
 .pos-abs {
   position: absolute;
   left: 0;
@@ -215,6 +212,7 @@ section {
 }
 .flip-book {
   background-color: #fff;
+  margin: auto;
 }
 .flip-book .page-wrapper {
   -webkit-perspective: 2000px;
@@ -222,6 +220,10 @@ section {
   -ms-perspective: 2000px;
   -o-perspective: 2000px;
   perspective: 2000px;
+}
+.flip-book section {
+  height: 100%;
+img
 }
 .flip-icon {
   width: 40px;
