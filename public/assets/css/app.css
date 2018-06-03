@@ -29,10 +29,21 @@ section {
 .l-w--100p {
   width: 100%;
 }
+.flip-book {
+  background-color: #fff;
+}
+.flip-book .page-wrapper {
+  -webkit-perspective: 2000px;
+  -moz-perspective: 2000px;
+  -ms-perspective: 2000px;
+  -o-perspective: 2000px;
+  perspective: 2000px;
+}
 .c-header {
   position: absolute;
   height: 60px;
   width: 100%;
+  z-index: 1000;
 }
 .c-header__border {
   height: 6px;
