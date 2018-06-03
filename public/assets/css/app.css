@@ -188,6 +188,9 @@
 .bg-black {
   background: #000;
 }
+.bg-grey {
+  background: #cecece;
+}
 html,
 body,
 * {
@@ -212,6 +215,9 @@ li {
 }
 .l-w--100p {
   width: 100%;
+}
+.l-mt-10 {
+  margin-top: 10px;
 }
 .flip-book {
   background-color: #fff;
