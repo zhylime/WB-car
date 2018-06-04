@@ -23,7 +23,6 @@ $(document).ready(function () {
     return (/iphone/gi.test(navigator.userAgent) && screen.height == 812 && screen.width == 375
     );
   }
-  $(".js-flip-book").turn("page", 24);
   function loadFlipBook() {
     var w = $(window).width();
     var h = $(window).height();
@@ -47,7 +46,17 @@ $(document).ready(function () {
             if (page == 39) {
               $('.js-flip-btn').hide();
             }
-            $(".fancybox").fancybox();
+            $(".fancybox").fancybox({
+              closeEffect: 'none',
+              closeBtn: false,
+              helpers: {
+                overlay: {
+                  css: {
+                    'background': 'rgba(0, 0, 0, 0.95)'
+                  }
+                }
+              }
+            });
             $('.js-m-video').on('click touchend', function (e) {
               var url = $(e.currentTarget).data('src');
               if (url !== '') {

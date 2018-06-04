@@ -548,15 +548,6 @@ li {
   top: 50%;
   transform: translateY(-60%);
 }
-.fancybox-caption-wrap {
-  display: none;
-}
-.fancybox-toolbar {
-  left: 0;
-}
-.fancybox-button--fullscreen {
-  display: none;
-}
 .flip-book {
   background-color: #fff;
   margin: auto;
