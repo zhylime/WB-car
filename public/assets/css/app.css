@@ -699,6 +699,7 @@ img
 .bw-video {
   width: 7%;
   animation: fadeAnimation 3s infinite ease-in forwards;
+  -webkit-animation: fadeAnimation 3s infinite ease-in forwards;
 }
 .bw-video__btn--1 {
   top: 12%;
