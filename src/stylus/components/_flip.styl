@@ -22,7 +22,10 @@
   background url(../img/icon-flip.jpg)
   background-size 100% 100%
   animation flipIconAnimation 2s ease-out infinite
-
+.isIphoneX .flip-icon
+  width 50px
+  height 50px
+  animation flipIconAnimationX 2s ease-out infinite
 .flip-path
   position absolute
   background url(../img/s6-path.png)
@@ -33,20 +36,22 @@
   transform translate(-50%, -50%)
   background-size cover
 .flip-ball
-  background url(../img/s6-ball.png)
-  width 20px
-  height 20px
-  background-size 100% 100%
+  // background url(../img/s6-ball-2.png)
+  width 40px
+  // height 20px
+  // background-size 100% 100%
   position absolute
-  top -8%
-  left 11%
-  transform rotate(0)
-  
+  // top -8%
+  // left 11%
+  // transform rotate(0)
+  top -22%
+  left -1%
 .page-wrapper.active .flip-ball-anim
   opacity 0
   animation ballAnimation 1.5s linear infinite
   animation-delay 0.6s
   -webkit-animation-delay 0.6s
+  // animation-play-state paused
 #p2 .flip-book-category-last-item
   width 181px
   top 14%
@@ -57,7 +62,7 @@
   left 55%
 #p19 .flip-book-category-last-item
   width 121px
-  top 37%
+  top 41%
   left 33%
 #p30 .flip-book-category-last-item
   width 129px
@@ -67,15 +72,6 @@
   width 128px
   top 63%
   left 57%
-// .page-wrapper.active .flip-cover
-//   position absolute
-//   width 100%
-//   height 100%
-//   top 0
-//   left 0
-//   z-index 1
-//   opacity 1
-//   animation fadeOutAnimation .2s forwards
 
 .page-wrapper.active .flip-book-category-anim-1
   opacity 0
@@ -125,3 +121,55 @@
   animation flipIntoRight 2s 1 ease-in forwards
   animation-deplay .5s
   -webkit-animation-delay .5s
+
+// 
+.page-wrapper.active .flip-s7-anim
+  opacity 0
+  -webkit-animation fadeInAnimation 0.5s forwards
+  animation fadeInAnimation 0.5s forwards
+  &--1
+    animation-deplay 1s
+    -webkit-animation-delay 1s
+  &--2
+    animation-deplay 1.5s
+    -webkit-animation-delay 1.5s
+  &--3
+    animation-deplay 2s
+    -webkit-animation-delay 2s
+  &--4
+    animation-deplay 2.5s
+    -webkit-animation-delay 2.5s
+  &--5
+    animation-deplay 3s
+    -webkit-animation-delay 3s
+  &--6
+    animation-deplay 3.5s
+    -webkit-animation-delay 3.5s
+  &--7
+    animation-deplay 4s
+    -webkit-animation-delay 4s
+  &--8
+    animation-deplay 4.5s
+    -webkit-animation-delay 4.5s
+  &--9
+    animation-deplay 5s
+    -webkit-animation-delay 5s
+  &--10
+    animation-deplay 5.5s
+    -webkit-animation-delay 5.5s
+  &--11
+    animation-deplay 6s
+    -webkit-animation-delay 6s
+  &--12
+    animation-deplay 6.5s
+    -webkit-animation-delay 6.5s
+  &--13
+    animation-deplay 7s
+    -webkit-animation-delay 7s
+  &--14
+    animation-deplay 7.5s
+    -webkit-animation-delay 7.5s
+  &--15
+    animation-deplay 8s
+    -webkit-animation-delay 8s
+  

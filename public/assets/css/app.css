@@ -54,6 +54,62 @@
     height: 40px;
   }
 }
+@-moz-keyframes flipIconAnimationX {
+  0% {
+    width: 50px;
+    height: 50px;
+  }
+  50% {
+    width: 30px;
+    height: 30px;
+  }
+  100% {
+    width: 50px;
+    height: 50px;
+  }
+}
+@-webkit-keyframes flipIconAnimationX {
+  0% {
+    width: 50px;
+    height: 50px;
+  }
+  50% {
+    width: 30px;
+    height: 30px;
+  }
+  100% {
+    width: 50px;
+    height: 50px;
+  }
+}
+@-o-keyframes flipIconAnimationX {
+  0% {
+    width: 50px;
+    height: 50px;
+  }
+  50% {
+    width: 30px;
+    height: 30px;
+  }
+  100% {
+    width: 50px;
+    height: 50px;
+  }
+}
+@keyframes flipIconAnimationX {
+  0% {
+    width: 50px;
+    height: 50px;
+  }
+  50% {
+    width: 30px;
+    height: 30px;
+  }
+  100% {
+    width: 50px;
+    height: 50px;
+  }
+}
 @-moz-keyframes fadeInAnimation {
   from {
     opacity: 0;
@@ -185,141 +241,121 @@
 @-moz-keyframes ballAnimation {
   0% {
     opacity: 0;
-    transform: rotate(0);
-    top: -8%;
-    left: 11%;
+    top: -22%;
+    left: -1%;
   }
-  5% {
+  10% {
     opacity: 1;
   }
   25% {
-    transform: rotate(270deg);
-    top: 15%;
-    left: 23%;
+    top: 5%;
+    left: 13%;
   }
   50% {
-    transform: rotate(540deg);
-    top: 32%;
-    left: 34%;
+    top: 28%;
+    left: 30%;
   }
   75% {
-    transform: rotate(810deg);
-    top: 53%;
-    left: 54%;
+    top: 47%;
+    left: 52%;
   }
-  95% {
+  90% {
     opacity: 1;
   }
   100% {
     opacity: 0;
-    transform: rotate(1080deg);
-    top: 73%;
-    left: 91%;
+    top: 63%;
+    left: 82%;
   }
 }
 @-webkit-keyframes ballAnimation {
   0% {
     opacity: 0;
-    transform: rotate(0);
-    top: -8%;
-    left: 11%;
+    top: -22%;
+    left: -1%;
   }
-  5% {
+  10% {
     opacity: 1;
   }
   25% {
-    transform: rotate(270deg);
-    top: 15%;
-    left: 23%;
+    top: 5%;
+    left: 13%;
   }
   50% {
-    transform: rotate(540deg);
-    top: 32%;
-    left: 34%;
+    top: 28%;
+    left: 30%;
   }
   75% {
-    transform: rotate(810deg);
-    top: 53%;
-    left: 54%;
+    top: 47%;
+    left: 52%;
   }
-  95% {
+  90% {
     opacity: 1;
   }
   100% {
     opacity: 0;
-    transform: rotate(1080deg);
-    top: 73%;
-    left: 91%;
+    top: 63%;
+    left: 82%;
   }
 }
 @-o-keyframes ballAnimation {
   0% {
     opacity: 0;
-    transform: rotate(0);
-    top: -8%;
-    left: 11%;
+    top: -22%;
+    left: -1%;
   }
-  5% {
+  10% {
     opacity: 1;
   }
   25% {
-    transform: rotate(270deg);
-    top: 15%;
-    left: 23%;
+    top: 5%;
+    left: 13%;
   }
   50% {
-    transform: rotate(540deg);
-    top: 32%;
-    left: 34%;
+    top: 28%;
+    left: 30%;
   }
   75% {
-    transform: rotate(810deg);
-    top: 53%;
-    left: 54%;
+    top: 47%;
+    left: 52%;
   }
-  95% {
+  90% {
     opacity: 1;
   }
   100% {
     opacity: 0;
-    transform: rotate(1080deg);
-    top: 73%;
-    left: 91%;
+    top: 63%;
+    left: 82%;
   }
 }
 @keyframes ballAnimation {
   0% {
     opacity: 0;
-    transform: rotate(0);
-    top: -8%;
-    left: 11%;
+    top: -22%;
+    left: -1%;
   }
-  5% {
+  10% {
     opacity: 1;
   }
   25% {
-    transform: rotate(270deg);
-    top: 15%;
-    left: 23%;
+    top: 5%;
+    left: 13%;
   }
   50% {
-    transform: rotate(540deg);
-    top: 32%;
-    left: 34%;
+    top: 28%;
+    left: 30%;
   }
   75% {
-    transform: rotate(810deg);
-    top: 53%;
-    left: 54%;
+    top: 47%;
+    left: 52%;
   }
-  95% {
+  90% {
     opacity: 1;
   }
   100% {
     opacity: 0;
-    transform: rotate(1080deg);
-    top: 73%;
-    left: 91%;
+    top: 63%;
+    left: 82%;
   }
 }
 @-moz-keyframes fadeAnimation {
@@ -513,7 +549,7 @@ li {
   transform: translateY(-60%);
 }
 .fancybox-caption-wrap {
-  background: none;
+  display: none;
 }
 .fancybox-toolbar {
   left: 0;
@@ -549,6 +585,11 @@ li {
   background-size: 100% 100%;
   animation: flipIconAnimation 2s ease-out infinite;
 }
+.isIphoneX .flip-icon {
+  width: 50px;
+  height: 50px;
+  animation: flipIconAnimationX 2s ease-out infinite;
+}
 .flip-path {
   position: absolute;
   background: url("../img/s6-path.png");
@@ -560,14 +601,10 @@ li {
   background-size: cover;
 }
 .flip-ball {
-  background: url("../img/s6-ball.png");
-  width: 20px;
-  height: 20px;
-  background-size: 100% 100%;
+  width: 40px;
   position: absolute;
-  top: -8%;
-  left: 11%;
-  transform: rotate(0);
+  top: -22%;
+  left: -1%;
 }
 .page-wrapper.active .flip-ball-anim {
   opacity: 0;
@@ -587,7 +624,7 @@ li {
 }
 #p19 .flip-book-category-last-item {
   width: 121px;
-  top: 37%;
+  top: 41%;
   left: 33%;
 }
 #p30 .flip-book-category-last-item {
@@ -655,6 +692,71 @@ li {
   animation: flipIntoRight 2s 1 ease-in forwards;
   animation-deplay: 0.5s;
   -webkit-animation-delay: 0.5s;
+}
+.page-wrapper.active .flip-s7-anim {
+  opacity: 0;
+  -webkit-animation: fadeInAnimation 0.5s forwards;
+  animation: fadeInAnimation 0.5s forwards;
+}
+.page-wrapper.active .flip-s7-anim--1 {
+  animation-deplay: 1s;
+  -webkit-animation-delay: 1s;
+}
+.page-wrapper.active .flip-s7-anim--2 {
+  animation-deplay: 1.5s;
+  -webkit-animation-delay: 1.5s;
+}
+.page-wrapper.active .flip-s7-anim--3 {
+  animation-deplay: 2s;
+  -webkit-animation-delay: 2s;
+}
+.page-wrapper.active .flip-s7-anim--4 {
+  animation-deplay: 2.5s;
+  -webkit-animation-delay: 2.5s;
+}
+.page-wrapper.active .flip-s7-anim--5 {
+  animation-deplay: 3s;
+  -webkit-animation-delay: 3s;
+}
+.page-wrapper.active .flip-s7-anim--6 {
+  animation-deplay: 3.5s;
+  -webkit-animation-delay: 3.5s;
+}
+.page-wrapper.active .flip-s7-anim--7 {
+  animation-deplay: 4s;
+  -webkit-animation-delay: 4s;
+}
+.page-wrapper.active .flip-s7-anim--8 {
+  animation-deplay: 4.5s;
+  -webkit-animation-delay: 4.5s;
+}
+.page-wrapper.active .flip-s7-anim--9 {
+  animation-deplay: 5s;
+  -webkit-animation-delay: 5s;
+}
+.page-wrapper.active .flip-s7-anim--10 {
+  animation-deplay: 5.5s;
+  -webkit-animation-delay: 5.5s;
+}
+.page-wrapper.active .flip-s7-anim--11 {
+  animation-deplay: 6s;
+  -webkit-animation-delay: 6s;
+}
+.page-wrapper.active .flip-s7-anim--12 {
+  animation-deplay: 6.5s;
+  -webkit-animation-delay: 6.5s;
+}
+.page-wrapper.active .flip-s7-anim--13 {
+  animation-deplay: 7s;
+  -webkit-animation-delay: 7s;
+}
+.page-wrapper.active .flip-s7-anim--14 {
+  animation-deplay: 7.5s;
+  -webkit-animation-delay: 7.5s;
+}
+.page-wrapper.active .flip-s7-anim--15 {
+  animation-deplay: 8s;
+  -webkit-animation-delay: 8s;
 }
 .c-header {
   position: absolute;
@@ -727,6 +829,7 @@ li {
 .c-header__menu ul li a {
   color: #969696;
   font-size: 0.6rem;
+  text-decoration: none;
 }
 .c-header__menu ul li span {
   vertical-align: middle;
