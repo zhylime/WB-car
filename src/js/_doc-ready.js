@@ -47,7 +47,6 @@ $(document).ready(function(){
 					}
 				}
 			});
-			$(".js-flip-book").turn("page",22)
 		}
     updateMenu(_page)
 
