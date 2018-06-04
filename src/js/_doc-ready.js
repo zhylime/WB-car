@@ -5,7 +5,9 @@ $(document).ready(function(){
       menu2 = 35,
       menu3 = 36;
   var menuArray = [1, 35, 36];
+  var isX;
 
+  checkIphoneX();
   loadFlipBook();
   header();
   events();
@@ -20,7 +22,15 @@ $(document).ready(function(){
 		console.log($(e.currentTarget).data('src'),'ss');
 
 	});
-
+  function checkIphoneX(){
+    isX = isIphoneX();
+    if(isX){
+      $('html').addClass('isIphoneX');
+    }
+  }
+  function isIphoneX(){
+    return /iphone/gi.test(navigator.userAgent) && (screen.height == 812 && screen.width == 375)
+  }
 	function loadFlipBook(){
 		let w = $(window).width();
 		let h = $(window).height();
