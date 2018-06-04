@@ -39,7 +39,9 @@ $(document).ready(function(){
       $(this).on('click touchend', function(){
         let _n = $(this).attr('data-url').toString() - 1;
         $(".js-flip-book").turn("page", menuArray[_n]);
-      })
+        updateMenu(menuArray[_n]);
+      });
+
     });
   }
 
