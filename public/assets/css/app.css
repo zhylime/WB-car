@@ -186,26 +186,26 @@
   0% {
     opacity: 0;
     transform: rotate(0);
-    top: 42%;
-    left: 30%;
+    top: -8%;
+    left: 11%;
   }
   5% {
     opacity: 1;
   }
   25% {
     transform: rotate(270deg);
-    top: 50%;
-    left: 38%;
+    top: 15%;
+    left: 23%;
   }
-  55% {
+  50% {
     transform: rotate(540deg);
-    top: 55%;
-    left: 45%;
+    top: 32%;
+    left: 34%;
   }
-  80% {
+  75% {
     transform: rotate(810deg);
-    top: 60%;
-    left: 55%;
+    top: 53%;
+    left: 54%;
   }
   95% {
     opacity: 1;
@@ -213,34 +213,34 @@
   100% {
     opacity: 0;
     transform: rotate(1080deg);
-    top: 64%;
-    left: 72%;
+    top: 73%;
+    left: 91%;
   }
 }
 @-webkit-keyframes ballAnimation {
   0% {
     opacity: 0;
     transform: rotate(0);
-    top: 42%;
-    left: 30%;
+    top: -8%;
+    left: 11%;
   }
   5% {
     opacity: 1;
   }
   25% {
     transform: rotate(270deg);
-    top: 50%;
-    left: 38%;
+    top: 15%;
+    left: 23%;
   }
-  55% {
+  50% {
     transform: rotate(540deg);
-    top: 55%;
-    left: 45%;
+    top: 32%;
+    left: 34%;
   }
-  80% {
+  75% {
     transform: rotate(810deg);
-    top: 60%;
-    left: 55%;
+    top: 53%;
+    left: 54%;
   }
   95% {
     opacity: 1;
@@ -248,34 +248,34 @@
   100% {
     opacity: 0;
     transform: rotate(1080deg);
-    top: 64%;
-    left: 72%;
+    top: 73%;
+    left: 91%;
   }
 }
 @-o-keyframes ballAnimation {
   0% {
     opacity: 0;
     transform: rotate(0);
-    top: 42%;
-    left: 30%;
+    top: -8%;
+    left: 11%;
   }
   5% {
     opacity: 1;
   }
   25% {
     transform: rotate(270deg);
-    top: 50%;
-    left: 38%;
+    top: 15%;
+    left: 23%;
   }
-  55% {
+  50% {
     transform: rotate(540deg);
-    top: 55%;
-    left: 45%;
+    top: 32%;
+    left: 34%;
   }
-  80% {
+  75% {
     transform: rotate(810deg);
-    top: 60%;
-    left: 55%;
+    top: 53%;
+    left: 54%;
   }
   95% {
     opacity: 1;
@@ -283,34 +283,34 @@
   100% {
     opacity: 0;
     transform: rotate(1080deg);
-    top: 64%;
-    left: 72%;
+    top: 73%;
+    left: 91%;
   }
 }
 @keyframes ballAnimation {
   0% {
     opacity: 0;
     transform: rotate(0);
-    top: 42%;
-    left: 30%;
+    top: -8%;
+    left: 11%;
   }
   5% {
     opacity: 1;
   }
   25% {
     transform: rotate(270deg);
-    top: 50%;
-    left: 38%;
+    top: 15%;
+    left: 23%;
   }
-  55% {
+  50% {
     transform: rotate(540deg);
-    top: 55%;
-    left: 45%;
+    top: 32%;
+    left: 34%;
   }
-  80% {
+  75% {
     transform: rotate(810deg);
-    top: 60%;
-    left: 55%;
+    top: 53%;
+    left: 54%;
   }
   95% {
     opacity: 1;
@@ -318,8 +318,8 @@
   100% {
     opacity: 0;
     transform: rotate(1080deg);
-    top: 64%;
-    left: 72%;
+    top: 73%;
+    left: 91%;
   }
 }
 .bg-lily-white {
@@ -385,14 +385,24 @@ img
   background-size: 100% 100%;
   animation: flipIconAnimation 2s ease-out infinite;
 }
+.flip-path {
+  position: absolute;
+  background: url("../img/s6-path.png");
+  width: 150px;
+  height: 150px;
+  top: 58%;
+  left: 48%;
+  transform: translate(-50%, -50%);
+  background-size: cover;
+}
 .flip-ball {
   background: url("../img/s6-ball.png");
   width: 20px;
   height: 20px;
   background-size: 100% 100%;
   position: absolute;
-  top: 42%;
-  left: 30%;
+  top: -8%;
+  left: 11%;
   transform: rotate(0);
 }
 .page-wrapper.active .flip-ball-anim {
