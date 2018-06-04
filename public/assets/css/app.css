@@ -574,6 +574,21 @@ li {
 .flip-book section a:focus {
   outline: none;
 }
+.flip-book .page {
+  background: #ededed;
+}
+.flip-book .p2,
+.flip-book .p15,
+.flip-book .p19,
+.flip-book .p30,
+.flip-book .p33 {
+  background: #000;
+}
+.flip-book .p34,
+.flip-book .p35,
+.flip-book .p36 {
+  background: #cecece;
+}
 .flip-icon {
   width: 40px;
   height: 40px;
