@@ -57,7 +57,9 @@ $(document).ready(function () {
     $('header ul li a').each(function () {
       $(this).on('click touchend', function () {
         var _n = $(this).attr('data-url').toString() - 1;
+        $('.js-flip-btn').show();
         $(".js-flip-book").turn("page", menuArray[_n]);
+        _page = menuArray[_n];
         updateMenu(menuArray[_n]);
       });
     });
@@ -78,6 +80,7 @@ $(document).ready(function () {
   }
 
   function updateMenu(pageNumber) {
+    console.log(pageNumber);
     var n = pageNumber;
     $('header ul li').removeClass('active');
     if (n < menu2) {
