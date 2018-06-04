@@ -29,10 +29,10 @@ $(document).ready(function(){
 				display: 'single',
 				when: {
 					turning: function (e, page, view){
-					},
-					turned: function (e, page, view) {
 						$('.page-wrapper').removeClass('active');
 						$('.page-wrapper[page="' + page + '"]').addClass('active');
+					},
+					turned: function (e, page, view) {
 						if (page == 39) {
 							$('.js-flip-btn').hide();
 						}

@@ -28,10 +28,11 @@ $(document).ready(function () {
         autoCenter: true,
         display: 'single',
         when: {
-          turning: function turning(e, page, view) {},
-          turned: function turned(e, page, view) {
+          turning: function turning(e, page, view) {
             $('.page-wrapper').removeClass('active');
             $('.page-wrapper[page="' + page + '"]').addClass('active');
+          },
+          turned: function turned(e, page, view) {
             if (page == 39) {
               $('.js-flip-btn').hide();
             }
