@@ -51,8 +51,11 @@ $(document).ready(function () {
       $('.page-wrapper[page="' + _page + '"]').addClass('active');
       $(this).hide();
       $(".js-flip-book").turn('next');
-      $(this).fadeIn();
+
       updateMenu(_page);
+      if (_page !== 38) {
+        $(this).fadeIn();
+      }
     });
   }
 

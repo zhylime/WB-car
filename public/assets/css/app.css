@@ -184,26 +184,34 @@
 }
 @-moz-keyframes ballAnimation {
   0% {
+    opacity: 0;
     transform: rotate(0);
     top: 42%;
     left: 30%;
   }
-  30% {
+  5% {
+    opacity: 1;
+  }
+  25% {
     transform: rotate(270deg);
     top: 50%;
     left: 38%;
   }
-  60% {
+  55% {
     transform: rotate(540deg);
     top: 55%;
     left: 45%;
   }
-  85% {
+  80% {
     transform: rotate(810deg);
     top: 60%;
     left: 55%;
   }
+  95% {
+    opacity: 1;
+  }
   100% {
+    opacity: 0;
     transform: rotate(1080deg);
     top: 64%;
     left: 72%;
@@ -211,26 +219,34 @@
 }
 @-webkit-keyframes ballAnimation {
   0% {
+    opacity: 0;
     transform: rotate(0);
     top: 42%;
     left: 30%;
   }
-  30% {
+  5% {
+    opacity: 1;
+  }
+  25% {
     transform: rotate(270deg);
     top: 50%;
     left: 38%;
   }
-  60% {
+  55% {
     transform: rotate(540deg);
     top: 55%;
     left: 45%;
   }
-  85% {
+  80% {
     transform: rotate(810deg);
     top: 60%;
     left: 55%;
   }
+  95% {
+    opacity: 1;
+  }
   100% {
+    opacity: 0;
     transform: rotate(1080deg);
     top: 64%;
     left: 72%;
@@ -238,26 +254,34 @@
 }
 @-o-keyframes ballAnimation {
   0% {
+    opacity: 0;
     transform: rotate(0);
     top: 42%;
     left: 30%;
   }
-  30% {
+  5% {
+    opacity: 1;
+  }
+  25% {
     transform: rotate(270deg);
     top: 50%;
     left: 38%;
   }
-  60% {
+  55% {
     transform: rotate(540deg);
     top: 55%;
     left: 45%;
   }
-  85% {
+  80% {
     transform: rotate(810deg);
     top: 60%;
     left: 55%;
   }
+  95% {
+    opacity: 1;
+  }
   100% {
+    opacity: 0;
     transform: rotate(1080deg);
     top: 64%;
     left: 72%;
@@ -265,26 +289,34 @@
 }
 @keyframes ballAnimation {
   0% {
+    opacity: 0;
     transform: rotate(0);
     top: 42%;
     left: 30%;
   }
-  30% {
+  5% {
+    opacity: 1;
+  }
+  25% {
     transform: rotate(270deg);
     top: 50%;
     left: 38%;
   }
-  60% {
+  55% {
     transform: rotate(540deg);
     top: 55%;
     left: 45%;
   }
-  85% {
+  80% {
     transform: rotate(810deg);
     top: 60%;
     left: 55%;
   }
+  95% {
+    opacity: 1;
+  }
   100% {
+    opacity: 0;
     transform: rotate(1080deg);
     top: 64%;
     left: 72%;
@@ -364,6 +396,7 @@ img
   transform: rotate(0);
 }
 .page-wrapper.active .flip-ball-anim {
+  opacity: 0;
   animation: ballAnimation 1.5s linear infinite;
   animation-delay: 0.6s;
   -webkit-animation-delay: 0.6s;
