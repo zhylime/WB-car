@@ -17,6 +17,7 @@ $(document).ready(function(){
 			$('.m-video').attr('data-src', url);
 			$('.m-video').trigger('click');
 		}
+		console.log($(e.currentTarget).data('src'),'ss');
 
 	});
 
