@@ -496,7 +496,9 @@ li {
 }
 .flip-book section {
   height: 100%;
-img
+}
+.flip-book section a:focus {
+  outline: none;
 }
 .flip-icon {
   width: 40px;
