@@ -21,6 +21,20 @@
   background url(../img/icon-flip.jpg)
   background-size 100% 100%
   animation flipIconAnimation 2s ease-out infinite
+.flip-ball
+  background url(../img/s6-ball.png)
+  width 20px
+  height 20px
+  background-size 100% 100%
+  position absolute
+  top 42%
+  left 30%
+  transform rotate(0)
+  
+.page-wrapper.active .flip-ball-anim
+  animation ballAnimation 1.5s linear infinite
+  animation-delay 0.6s
+  -webkit-animation-delay 0.6s
 #p2 .flip-book-category-last-item
   width 181px
   top 12.5%
