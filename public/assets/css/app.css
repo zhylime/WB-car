@@ -367,73 +367,97 @@
   }
 }
 @-moz-keyframes flipIntoLeft {
-  from {
+  0% {
     left: -100%;
   }
-  to {
+  90% {
+    left: -5%;
+  }
+  100% {
     opacity: 1;
     left: 0;
   }
 }
 @-webkit-keyframes flipIntoLeft {
-  from {
+  0% {
     left: -100%;
   }
-  to {
+  90% {
+    left: -5%;
+  }
+  100% {
     opacity: 1;
     left: 0;
   }
 }
 @-o-keyframes flipIntoLeft {
-  from {
+  0% {
     left: -100%;
   }
-  to {
+  90% {
+    left: -5%;
+  }
+  100% {
     opacity: 1;
     left: 0;
   }
 }
 @keyframes flipIntoLeft {
-  from {
+  0% {
     left: -100%;
   }
-  to {
+  90% {
+    left: -5%;
+  }
+  100% {
     opacity: 1;
     left: 0;
   }
 }
 @-moz-keyframes flipIntoRight {
-  from {
+  0% {
     left: 100%;
   }
-  to {
+  90% {
+    left: 5%;
+  }
+  100% {
     opacity: 1;
     left: 0;
   }
 }
 @-webkit-keyframes flipIntoRight {
-  from {
+  0% {
     left: 100%;
   }
-  to {
+  90% {
+    left: 5%;
+  }
+  100% {
     opacity: 1;
     left: 0;
   }
 }
 @-o-keyframes flipIntoRight {
-  from {
+  0% {
     left: 100%;
   }
-  to {
+  90% {
+    left: 5%;
+  }
+  100% {
     opacity: 1;
     left: 0;
   }
 }
 @keyframes flipIntoRight {
-  from {
+  0% {
     left: 100%;
   }
-  to {
+  90% {
+    left: 5%;
+  }
+  100% {
     opacity: 1;
     left: 0;
   }
@@ -482,6 +506,20 @@ li {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+}
+.l-center-60 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-60%);
+}
+.fancybox-caption-wrap {
+  background: none;
+}
+.fancybox-toolbar {
+  left: 0;
+}
+.fancybox-button--fullscreen {
+  display: none;
 }
 .flip-book {
   background-color: #fff;

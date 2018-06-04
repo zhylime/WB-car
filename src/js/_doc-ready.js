@@ -6,21 +6,10 @@ $(document).ready(function(){
       menu3 = 36;
   var menuArray = [1, 35, 36];
 
+
   loadFlipBook();
   header();
   events();
-
-	if($(".fancybox").length){
-		$(".fancybox").fancybox();
-	}
-	$('.js-m-video').off('click touchend').on('click touchend', function(e){
-		const url = $(e.currentTarget).data('src');
-		if(url !=='') {
-			$('.m-video').attr('data-src', url);
-			$('.m-video').trigger('click');
-		}
-	});
-
 	function loadFlipBook(){
 		let w = $(window).width();
 		let h = $(window).height();
@@ -44,6 +33,14 @@ $(document).ready(function(){
 						if (page == 39) {
 							$('.js-flip-btn').hide();
 						}
+						$(".fancybox").fancybox();
+						$('.js-m-video').on('click touchend', function(e){
+							const url = $(e.currentTarget).data('src');
+							if(url !=='') {
+								$('.m-video').attr('data-src', url);
+								$('.m-video').trigger('click');
+							}
+						});
 					}
 				}
 			});
