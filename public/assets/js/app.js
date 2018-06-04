@@ -12,6 +12,15 @@ $(document).ready(function () {
   header();
   events();
 
+  $('.js-m-video').off('click touchend').on('click touchend', function (e) {
+    e.preventDefault();
+    var url = $(e.currentTarget).data('src');
+    if (url !== '') {
+      $('.m-video').attr('data-src', url);
+      $('.m-video').trigger('click');
+    }
+  });
+
   function loadFlipBook() {
     var w = $(window).width();
     var h = $(window).height();
@@ -39,6 +48,7 @@ $(document).ready(function () {
           }
         }
       });
+      $(".js-flip-book").turn("page", 22);
     }
     updateMenu(_page);
   }
