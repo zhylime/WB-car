@@ -1,57 +1,57 @@
 @-moz-keyframes flipIconAnimation {
   0% {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
   }
   50% {
     width: 30px;
     height: 30px;
   }
   100% {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
   }
 }
 @-webkit-keyframes flipIconAnimation {
   0% {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
   }
   50% {
     width: 30px;
     height: 30px;
   }
   100% {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
   }
 }
 @-o-keyframes flipIconAnimation {
   0% {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
   }
   50% {
     width: 30px;
     height: 30px;
   }
   100% {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
   }
 }
 @keyframes flipIconAnimation {
   0% {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
   }
   50% {
     width: 30px;
     height: 30px;
   }
   100% {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
   }
 }
 @-moz-keyframes fadeInAnimation {
@@ -235,15 +235,15 @@ li {
 img
 }
 .flip-icon {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   position: absolute;
   right: 0;
   bottom: 0;
   z-index: 99;
   background: url("../img/icon-flip.jpg");
   background-size: 100% 100%;
-  animation: flipIconAnimation 1.5s infinite;
+  animation: flipIconAnimation 2s ease-out infinite;
 }
 #p2 .flip-book-category-last-item {
   width: 181px;
@@ -388,10 +388,14 @@ img
 }
 .c-header__menu ul li {
   list-style-type: none;
+  color: #969696;
 }
 .c-header__menu ul li a {
   color: #969696;
   font-size: 0.6rem;
+}
+.c-header__menu ul li span {
+  vertical-align: middle;
 }
 .c-header__menu ul li.active a {
   color: #000;

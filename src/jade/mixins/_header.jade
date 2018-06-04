@@ -9,8 +9,8 @@ mixin header()
           if(index < headerMenu.length - 1)
             - console.log(index)
             li.
-              <a href="javascript:void(0);">#{item.txt}</a>&nbsp;／&nbsp;
+              <a href="javascript:void(0);" data-url="#{index+1}">#{item.txt}</a><span>&nbsp;／&nbsp;</span>
           else
             li
-              a(href="javascript:void(0);")!= item.txt
+              a(href="javascript:void(0);" data-url="3")!= item.txt
       .c-header__border

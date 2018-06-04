@@ -4,19 +4,13 @@ $(document).ready(function(){
   var menu1 = 1,
       menu2 = 35,
       menu3 = 36;
+  var menuArray = [1, 35, 36];
 
   loadFlipBook();
+  header();
+  events();
 
-  $('.js-flip-btn').on('click touchend', function(e){
-  	e.preventDefault();
-    _page++;
-    $('.page-wrapper').removeClass('active');
-    $('.page-wrapper[page="' + _page + '"]').addClass('active');
-  	$(this).hide();
-  	$(".js-flip-book").turn('next');
-  	$(this).fadeIn();
-    updateMenu(_page);
-  });
+
 
 	function loadFlipBook(){
 		let w = $(window).width();
@@ -39,6 +33,28 @@ $(document).ready(function(){
     updateMenu(_page)
 
 	}
+
+  function header(){
+    $('header ul li a').each(function(){
+      $(this).on('click touchend', function(){
+        let _n = $(this).attr('data-url').toString() - 1;
+        $(".js-flip-book").turn("page", menuArray[_n]);
+      })
+    });
+  }
+
+  function events(){
+    $('.js-flip-btn').on('click touchend', function(e){
+      e.preventDefault();
+      _page++;
+      $('.page-wrapper').removeClass('active');
+      $('.page-wrapper[page="' + _page + '"]').addClass('active');
+      $(this).hide();
+      $(".js-flip-book").turn('next');
+      $(this).fadeIn();
+      updateMenu(_page);
+    });
+  }
 
   function updateMenu(pageNumber){
     let n = pageNumber;

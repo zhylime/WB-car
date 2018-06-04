@@ -1,6 +1,6 @@
 {
   "app":{
-    "name":"宝沃的哲学",
+    "name":"宝沃页面",
     "description": "meta description",
     "keywords": "meta keywords"
   },
@@ -9,7 +9,7 @@
       "txt": "中国新势力X-Force"
     },
     {
-      "txt": "宝沃德车主"
+      "txt": "宝沃的车主"
     },
     {
       "txt": "宝沃安全未来"
