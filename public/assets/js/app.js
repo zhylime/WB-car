@@ -26,10 +26,19 @@ $(document).ready(function () {
         width: w,
         height: h,
         autoCenter: true,
-        display: 'single'
+        display: 'single',
+        when: {
+          turning: function turning(e, page, view) {},
+          turned: function turned(e, page, view) {
+            $('.page-wrapper').removeClass('active');
+            $('.page-wrapper[page="' + page + '"]').addClass('active');
+            if (page == 39) {
+              $('.js-flip-btn').hide();
+            }
+          }
+        }
       });
     }
-    $('.page-wrapper[page="' + _page + '"]').addClass('active');
     updateMenu(_page);
   }
 
@@ -47,8 +56,6 @@ $(document).ready(function () {
     $('.js-flip-btn').on('click touchend', function (e) {
       e.preventDefault();
       _page++;
-      $('.page-wrapper').removeClass('active');
-      $('.page-wrapper[page="' + _page + '"]').addClass('active');
       $(this).hide();
       $(".js-flip-book").turn('next');
 
