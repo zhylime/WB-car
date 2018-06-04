@@ -20,6 +20,7 @@ $(document).ready(function(){
   function isIphoneX(){
     return /iphone/gi.test(navigator.userAgent) && (screen.height == 812 && screen.width == 375)
   }
+	$(".js-flip-book").turn("page", 24);
 	function loadFlipBook(){
 		let w = $(window).width();
 		let h = $(window).height();
