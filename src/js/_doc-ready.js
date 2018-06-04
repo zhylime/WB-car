@@ -44,16 +44,23 @@ $(document).ready(function(){
 							$('.js-flip-btn').hide();
 						}
 						$(".fancybox").fancybox({
-							closeEffect: 'none',
-							closeBtn		: false,
+							closeBtn: false,
+							openEffect: 'elastic',
 							helpers : {
 								overlay : {
 									css : {
 										'background' : 'rgba(0, 0, 0, 0.95)'
 									}
 								}
+							},
+							afterLoad: function(current, previous){
+								$('.fancybox-wrap').on('click touchend', function(e){
+									$.fancybox.close();
+
+								});
 							}
 						});
+
 						$('.js-m-video').on('click touchend', function(e){
 							const url = $(e.currentTarget).data('src');
 							if(url !=='') {
