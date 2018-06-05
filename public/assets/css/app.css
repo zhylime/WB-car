@@ -403,73 +403,97 @@
   }
 }
 @-moz-keyframes flipIntoLeft {
-  from {
+  0% {
     left: -100%;
   }
-  to {
+  90% {
+    left: -5%;
+  }
+  100% {
     opacity: 1;
     left: 0;
   }
 }
 @-webkit-keyframes flipIntoLeft {
-  from {
+  0% {
     left: -100%;
   }
-  to {
+  90% {
+    left: -5%;
+  }
+  100% {
     opacity: 1;
     left: 0;
   }
 }
 @-o-keyframes flipIntoLeft {
-  from {
+  0% {
     left: -100%;
   }
-  to {
+  90% {
+    left: -5%;
+  }
+  100% {
     opacity: 1;
     left: 0;
   }
 }
 @keyframes flipIntoLeft {
-  from {
+  0% {
     left: -100%;
   }
-  to {
+  90% {
+    left: -5%;
+  }
+  100% {
     opacity: 1;
     left: 0;
   }
 }
 @-moz-keyframes flipIntoRight {
-  from {
+  0% {
     left: 100%;
   }
-  to {
+  90% {
+    left: 5%;
+  }
+  100% {
     opacity: 1;
     left: 0;
   }
 }
 @-webkit-keyframes flipIntoRight {
-  from {
+  0% {
     left: 100%;
   }
-  to {
+  90% {
+    left: 5%;
+  }
+  100% {
     opacity: 1;
     left: 0;
   }
 }
 @-o-keyframes flipIntoRight {
-  from {
+  0% {
     left: 100%;
   }
-  to {
+  90% {
+    left: 5%;
+  }
+  100% {
     opacity: 1;
     left: 0;
   }
 }
 @keyframes flipIntoRight {
-  from {
+  0% {
     left: 100%;
   }
-  to {
+  90% {
+    left: 5%;
+  }
+  100% {
     opacity: 1;
     left: 0;
   }
@@ -519,6 +543,11 @@ li {
   top: 50%;
   transform: translateY(-50%);
 }
+.l-center-60 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-60%);
+}
 .flip-book {
   background-color: #fff;
   margin: auto;
@@ -535,6 +564,21 @@ li {
 }
 .flip-book section a:focus {
   outline: none;
+}
+.flip-book .page {
+  background: #ededed;
+}
+.flip-book .p2,
+.flip-book .p15,
+.flip-book .p19,
+.flip-book .p30,
+.flip-book .p33 {
+  background: #000;
+}
+.flip-book .p34,
+.flip-book .p35,
+.flip-book .p36 {
+  background: #cecece;
 }
 .flip-icon {
   width: 40px;
@@ -641,19 +685,40 @@ li {
   animation-delay: 3.5s;
   -webkit-animation-delay: 3.5s;
 }
-.page-wrapper.active .flip-book-anim-24-top {
+.page-wrapper.active .flip-book-anim-24-2 {
   opacity: 0;
-  -webkit-animation: flipIntoLeft 2s 1 ease-in forwards;
-  animation: flipIntoLeft 2s 1 ease-in forwards;
+  -webkit-animation: flipIntoLeft 1.5s 1 ease-in forwards;
+  animation: flipIntoLeft 1.5s 1 ease-in forwards;
   animation-deplay: 0.5s;
   -webkit-animation-delay: 0.5s;
 }
-.page-wrapper.active .flip-book-anim-24-bottom {
+.page-wrapper.active .flip-book-anim-24-5 {
   opacity: 0;
-  -webkit-animation: flipIntoRight 2s 1 ease-in forwards;
-  animation: flipIntoRight 2s 1 ease-in forwards;
+  -webkit-animation: flipIntoRight 1.5s 1 ease-in forwards;
+  animation: flipIntoRight 1.5s 1 ease-in forwards;
   animation-deplay: 0.5s;
   -webkit-animation-delay: 0.5s;
+}
+.page-wrapper.active .flip-book-anim-24-1 {
+  opacity: 0;
+  -webkit-animation: flipIntoLeft 1.5s 1 ease-in forwards;
+  animation: flipIntoLeft 1.5s 1 ease-in forwards;
+  animation-deplay: 2s;
+  -webkit-animation-delay: 2s;
+}
+.page-wrapper.active .flip-book-anim-24-4 {
+  opacity: 0;
+  -webkit-animation: flipIntoRight 1.5s 1 ease-in forwards;
+  animation: flipIntoRight 1.5s 1 ease-in forwards;
+  animation-deplay: 2s;
+  -webkit-animation-delay: 2s;
+}
+.page-wrapper.active .flip-book-anim-24-3 {
+  opacity: 0;
+  -webkit-animation: flipIntoRight 1.5s 1 ease-in forwards;
+  animation: flipIntoRight 1.5s 1 ease-in forwards;
+  animation-deplay: 3.5s;
+  -webkit-animation-delay: 3.5s;
 }
 .page-wrapper.active .flip-s7-anim {
   opacity: 0;

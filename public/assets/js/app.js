@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 $(document).ready(function () {
   // console.log('doc ready');
@@ -13,17 +13,6 @@ $(document).ready(function () {
   loadFlipBook();
   header();
   events();
-
-  if ($(".fancybox").length) {
-    $(".fancybox").fancybox();
-  }
-  $('.js-m-video').off('click touchend').on('click touchend', function (e) {
-    var url = $(e.currentTarget).data('src');
-    if (url !== '') {
-      $('.m-video').attr('data-src', url);
-      $('.m-video').trigger('click');
-    }
-  });
   function checkIphoneX() {
     isX = isIphoneX();
     if (isX) {
@@ -57,6 +46,30 @@ $(document).ready(function () {
             if (page == 39) {
               $('.js-flip-btn').hide();
             }
+            $(".fancybox").fancybox({
+              closeBtn: false,
+              openEffect: 'elastic',
+              helpers: {
+                overlay: {
+                  css: {
+                    'background': 'rgba(0, 0, 0, 0.95)'
+                  }
+                }
+              },
+              afterLoad: function afterLoad(current, previous) {
+                $('.fancybox-wrap').on('click touchend', function (e) {
+                  $.fancybox.close();
+                });
+              }
+            });
+
+            $('.js-m-video').on('click touchend', function (e) {
+              var url = $(e.currentTarget).data('src');
+              if (url !== '') {
+                $('.m-video').attr('data-src', url);
+                $('.m-video').trigger('click');
+              }
+            });
           }
         }
       });
