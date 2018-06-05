@@ -581,6 +581,9 @@ li {
 .flip-book .p36 {
   background: #cecece;
 }
+.isIphoneX section.p24 {
+  top: 10px !important;
+}
 .flip-icon {
   width: 40px;
   height: 40px;
