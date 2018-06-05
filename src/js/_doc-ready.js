@@ -68,23 +68,29 @@ $(document).ready(function(){
 								$('.m-video').trigger('click');
 							}
 						});
+
+            updateMenu(page)
 					}
 				}
 			});
 		}
-    updateMenu(_page)
+    // updateMenu(_page)
 
 	}
   function header(){
     $('header ul li a').each(function(){
       $(this).on('click touchend', function(){
         let _n = $(this).attr('data-url').toString() - 1;
-        $('.js-flip-btn').show();
-        $(".js-flip-book").turn("page", menuArray[_n]);
         _page = menuArray[_n];
-        updateMenu(menuArray[_n]);
-
+        $('.js-flip-btn').show();
+        $(".js-flip-book").turn("page", _page);
+        
+        $('.page-wrapper').removeClass('active');
+        $('.page-wrapper[page="' + _page + '"]').addClass('active');
+        updateMenu(_page);
       });
+
+      
 
     });
   }
