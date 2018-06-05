@@ -43,8 +43,10 @@ $(document).ready(function () {
             $('.page-wrapper[page="' + page + '"]').addClass('active');
           },
           turned: function turned(e, page, view) {
-            if (page == 39) {
+            if (page == 38) {
               $('.js-flip-btn').hide();
+            } else {
+              $('.js-flip-btn').show();
             }
             $(".fancybox").fancybox({
               closeBtn: false,
