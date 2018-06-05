@@ -823,35 +823,35 @@ li {
   opacity: 0;
   animation: flipInX 0.5s ease-in forwards;
   -webkit-animation: fadeIn 0.5s ease-in forwards;
-  animation-delay: 1.5s;
-  -webkit-animation-delay: 1.5s;
+  animation-delay: 1s;
+  -webkit-animation-delay: 1s;
 }
 .page-wrapper.active .flip-book-category-anim-3 {
   opacity: 0;
   animation: fadeIn 0.5s ease-in forwards;
   -webkit-animation: fadeIn 0.5s ease-in forwards;
-  animation-delay: 2s;
-  -webkit-animation-delay: 2s;
+  animation-delay: 1.5s;
+  -webkit-animation-delay: 1.5s;
 }
 .page-wrapper.active .flip-book-category-anim-4 {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in forwards;
+  -webkit-animation: fadeIn 0.5s ease-in forwards;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+}
+.page-wrapper.active .flip-book-category-anim-5 {
   opacity: 0;
   animation: fadeIn 0.5s ease-in forwards;
   -webkit-animation: fadeIn 0.5s ease-in forwards;
   -webkit-animation-delay: 2.5s;
   animation-delay: 2.5s;
 }
-.page-wrapper.active .flip-book-category-anim-5 {
-  opacity: 0;
-  animation: fadeIn 0.5s ease-in forwards;
-  -webkit-animation: fadeIn 0.5s ease-in forwards;
-  -webkit-animation-delay: 3s;
-  animation-delay: 3s;
-}
 .page-wrapper.active .flip-book-category-anim-6 {
   animation: zoomIn 0.5s ease-in backwards;
   -webkit-animation: zoomIn 0.5s ease-in backwards;
-  animation-delay: 3.5s;
-  -webkit-animation-delay: 3.5s;
+  animation-delay: 3s;
+  -webkit-animation-delay: 3s;
 }
 .page-wrapper.active .flip-book-anim-24-2 {
   opacity: 0;
