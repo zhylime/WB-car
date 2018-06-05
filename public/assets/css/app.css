@@ -548,6 +548,9 @@ li {
   top: 50%;
   transform: translateY(-60%);
 }
+.fancybox-skin {
+  background-color: #fff;
+}
 .flip-book {
   background-color: #fff;
   margin: auto;

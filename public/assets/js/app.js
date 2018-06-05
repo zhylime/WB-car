@@ -54,7 +54,7 @@ $(document).ready(function () {
               helpers: {
                 overlay: {
                   css: {
-                    'background': 'rgba(0, 0, 0, 0.95)'
+                    'background': 'rgba(255, 255, 255, 0.95)'
                   }
                 }
               },
