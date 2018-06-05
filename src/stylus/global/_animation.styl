@@ -125,21 +125,25 @@
 
 @keyframes flipIntoLeft
   0%
-    left -100%
-  90%
-    left -5%
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  10%
+    opacity 1
   100%
     opacity 1
-    left 0
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
 
 @keyframes flipIntoRight
   0%
-    left 100%
-  90%
-    left 5%
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  10%
+    opacity 1
   100%
     opacity 1
-    left 0
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
 
 
 @keyframes fadeInDown {
