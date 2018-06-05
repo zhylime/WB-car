@@ -40,8 +40,10 @@ $(document).ready(function(){
 						$('.page-wrapper[page="' + page + '"]').addClass('active');
 					},
 					turned: function (e, page, view) {
-						if (page == 39) {
+						if (page == 38) {
 							$('.js-flip-btn').hide();
+						}else {
+							$('.js-flip-btn').show();
 						}
 						$(".fancybox").fancybox({
 							closeBtn: false,
@@ -49,7 +51,7 @@ $(document).ready(function(){
 							helpers : {
 								overlay : {
 									css : {
-										'background' : 'rgba(0, 0, 0, 0.95)'
+										'background' : 'rgba(255, 255, 255, 0.95)'
 									}
 								}
 							},

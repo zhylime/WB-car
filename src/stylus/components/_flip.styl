@@ -26,6 +26,10 @@
   .p35
   .p36
     background $col-grey
+.isIphoneX
+  section.p24
+    top: 10px!important;
+
 .flip-icon
   width 40px
   height 40px
@@ -80,84 +84,83 @@
   left 33%
 #p30 .flip-book-category-last-item
   width 129px
-  top 62%
+  top 69%
   left 9%
 #p33 .flip-book-category-last-item
   width 128px
-  top 63%
+  top 70%
   left 57%
 
 .page-wrapper.active .flip-book-category-anim-1
   opacity 0
-  animation fadeInAnimation 1s 1 ease-in forwards
-  -webkit-animation fadeInAnimation 1s 1 ease-in forwards
+  animation fadeIn 1s 1 ease-in forwards
+  -webkit-animation fadeIn 1s 1 ease-in forwards
   animation-deplay .5s
   -webkit-animation-delay .5s
 .page-wrapper.active .flip-book-category-anim-2
   opacity 0
-  animation fadeInAnimation .5s ease-in forwards
-  -webkit-animation fadeInAnimation .5s ease-in forwards
+  animation flipInX .5s ease-in forwards
+  -webkit-animation fadeIn .5s ease-in forwards
   animation-delay 1.5s
   -webkit-animation-delay 1.5s
 .page-wrapper.active .flip-book-category-anim-3
   opacity 0
-  animation fadeInAnimation .5s ease-in forwards
-  -webkit-animation fadeInAnimation .5s ease-in forwards
+  animation fadeIn .5s ease-in forwards
+  -webkit-animation fadeIn .5s ease-in forwards
   animation-delay 2s
   -webkit-animation-delay 2s
 .page-wrapper.active .flip-book-category-anim-4
   opacity 0
-  animation fadeInAnimation .5s ease-in forwards
-  -webkit-animation fadeInAnimation .5s ease-in forwards
+  animation fadeIn .5s ease-in forwards
+  -webkit-animation fadeIn .5s ease-in forwards
   -webkit-animation-delay 2.5s
   animation-delay 2.5s
 .page-wrapper.active .flip-book-category-anim-5
   opacity 0
-  animation fadeInAnimation .5s ease-in forwards
-  -webkit-animation fadeInAnimation .5s ease-in forwards
+  animation fadeIn .5s ease-in forwards
+  -webkit-animation fadeIn .5s ease-in forwards
   -webkit-animation-delay 3s
   animation-delay 3s
 .page-wrapper.active .flip-book-category-anim-6
-  opacity 0
-  animation fadeInAnimationLast .5s ease-in forwards
-  -webkit-animation fadeInAnimationLast .5s ease-in forwards
+  animation zoomIn .5s ease-in backwards
+  -webkit-animation zoomIn .5s ease-in backwards
   animation-delay 3.5s
   -webkit-animation-delay 3.5s
 .page-wrapper.active .flip-book-anim-24-2
   opacity 0
-  -webkit-animation flipIntoLeft 1s 1 ease-in forwards
-  animation flipIntoLeft 1s 1 ease-in forwards
-  animation-deplay .5s
-  -webkit-animation-delay .5s
+  -webkit-animation fadeInLeft .8s 1 ease-in forwards
+  animation fadeInLeft .8s 1 ease-in forwards
+  animation-deplay .4s
+  -webkit-animation-delay .4s
 .page-wrapper.active .flip-book-anim-24-5
   opacity 0
-  -webkit-animation flipIntoRight 1s 1 ease-in forwards
-  animation flipIntoRight 1s 1 ease-in forwards
-  animation-deplay .5s
-  -webkit-animation-delay .5s
+  -webkit-animation fadeInRight .8s 1 ease-in forwards
+  animation fadeInRight .8s 1 ease-in forwards
+  animation-deplay .4s
+  -webkit-animation-delay .4s
 .page-wrapper.active .flip-book-anim-24-1
   opacity 0
-  -webkit-animation flipIntoLeft 1s 1 ease-in forwards
-  animation flipIntoLeft 1s 1 ease-in forwards
-  animation-deplay .75s
-  -webkit-animation-delay .75s
+  -webkit-animation fadeInLeft .8s 1 ease-in forwards
+  animation fadeInLeft .8s 1 ease-in forwards
+  animation-deplay .6s
+  -webkit-animation-delay .6s
 .page-wrapper.active .flip-book-anim-24-4
   opacity 0
-  -webkit-animation flipIntoRight 1s 1 ease-in forwards
-  animation flipIntoRight 1s 1 ease-in forwards
-  animation-deplay .75s
-  -webkit-animation-delay .75s
+  -webkit-animation fadeInRight .8s 1 ease-in forwards
+  animation fadeInRight .8s 1 ease-in forwards
+  animation-deplay .6s
+  -webkit-animation-delay .6s
 .page-wrapper.active .flip-book-anim-24-3
   opacity 0
-  -webkit-animation flipIntoRight 1s 1 ease-in forwards
-  animation flipIntoRight 1s 1 ease-in forwards
-  animation-deplay 1s
-  -webkit-animation-delay 1s
+  -webkit-animation fadeInRight .8s 1 ease-in forwards
+  animation fadeInRight .8s 1 ease-in forwards
+  animation-deplay .8s
+  -webkit-animation-delay .8s
 // 
 .page-wrapper.active .flip-s7-anim
   opacity 0
-  -webkit-animation fadeInAnimation 0.2s ease-in forwards
-  animation fadeInAnimation 0.2s ease-in forwards
+  -webkit-animation flipInX 1s ease forwards
+  animation flipInX 1s ease forwards
   &--1
     animation-deplay .7s
     -webkit-animation-delay .7s
@@ -203,4 +206,73 @@
   &--15
     animation-deplay 3.5s
     -webkit-animation-delay 3.5s
+
+.page-wrapper.active .flip-s31-anim
+  opacity 0
+  -webkit-animation rollIn 1s ease forwards
+  animation rollIn 1s ease forwards
+  &--1
+    animation-deplay .7s
+    -webkit-animation-delay .7s
+  &--2
+    animation-deplay 1s
+    -webkit-animation-delay 1s
+  &--3
+    animation-deplay 1.3s
+    -webkit-animation-delay 1.3s
+  &--4
+    animation-deplay 1.6s
+    -webkit-animation-delay 1.6s
+  &--5
+    animation-deplay 1.8s
+    -webkit-animation-delay 1.8s
+  &--6
+    animation-deplay 2.1s
+    -webkit-animation-delay 2.1s
+  &--7
+    animation-deplay 2.4s
+    -webkit-animation-delay 2.4s
+  &--8
+    animation-deplay 2.7s
+    -webkit-animation-delay 2.7s
+  &--9
+    animation-deplay 3s
+    -webkit-animation-delay 3s
+  &--10
+    animation-deplay 3.3s
+    -webkit-animation-delay 3.4s
+  &--11
+    animation-deplay 3.7s
+    -webkit-animation-delay 3.7s
+  &--12
+    animation-deplay 4s
+    -webkit-animation-delay 4s
+  &--13
+    animation-deplay 4.3s
+    -webkit-animation-delay 4.3s
+  &--14
+    animation-deplay 4.6s
+    -webkit-animation-delay 4.6s
+  &--15
+    animation-deplay 4.9s
+    -webkit-animation-delay 4.9s
+.page-wrapper.active .flip-s18-anim
+  opacity 0
+  -webkit-animation fadeInDown 1s ease forwards
+  animation fadeInDown 1s ease forwards
+  &--1
+    animation-deplay .7s
+    -webkit-animation-delay .7s
+  &--2
+    animation-deplay 1s
+    -webkit-animation-delay 1s
+  &--3
+    animation-deplay 1.3s
+    -webkit-animation-delay 1.3s
+  &--4
+    animation-deplay 1.6s
+    -webkit-animation-delay 1.6s
+  &--5
+    animation-deplay 1.8s
+    -webkit-animation-delay 1.8s
   

@@ -548,6 +548,9 @@ li {
   top: 50%;
   transform: translateY(-60%);
 }
+.fancybox-skin {
+  background-color: #fff;
+}
 .flip-book {
   background-color: #fff;
   margin: auto;
@@ -580,6 +583,9 @@ li {
 .flip-book .p35,
 .flip-book .p36 {
   background: #cecece;
+}
+.isIphoneX section.p24 {
+  top: 10px !important;
 }
 .flip-icon {
   width: 40px;
@@ -636,95 +642,94 @@ li {
 }
 #p30 .flip-book-category-last-item {
   width: 129px;
-  top: 62%;
+  top: 69%;
   left: 9%;
 }
 #p33 .flip-book-category-last-item {
   width: 128px;
-  top: 63%;
+  top: 70%;
   left: 57%;
 }
 .page-wrapper.active .flip-book-category-anim-1 {
   opacity: 0;
-  animation: fadeInAnimation 1s 1 ease-in forwards;
-  -webkit-animation: fadeInAnimation 1s 1 ease-in forwards;
+  animation: fadeIn 1s 1 ease-in forwards;
+  -webkit-animation: fadeIn 1s 1 ease-in forwards;
   animation-deplay: 0.5s;
   -webkit-animation-delay: 0.5s;
 }
 .page-wrapper.active .flip-book-category-anim-2 {
   opacity: 0;
-  animation: fadeInAnimation 0.5s ease-in forwards;
-  -webkit-animation: fadeInAnimation 0.5s ease-in forwards;
+  animation: flipInX 0.5s ease-in forwards;
+  -webkit-animation: fadeIn 0.5s ease-in forwards;
   animation-delay: 1.5s;
   -webkit-animation-delay: 1.5s;
 }
 .page-wrapper.active .flip-book-category-anim-3 {
   opacity: 0;
-  animation: fadeInAnimation 0.5s ease-in forwards;
-  -webkit-animation: fadeInAnimation 0.5s ease-in forwards;
+  animation: fadeIn 0.5s ease-in forwards;
+  -webkit-animation: fadeIn 0.5s ease-in forwards;
   animation-delay: 2s;
   -webkit-animation-delay: 2s;
 }
 .page-wrapper.active .flip-book-category-anim-4 {
   opacity: 0;
-  animation: fadeInAnimation 0.5s ease-in forwards;
-  -webkit-animation: fadeInAnimation 0.5s ease-in forwards;
+  animation: fadeIn 0.5s ease-in forwards;
+  -webkit-animation: fadeIn 0.5s ease-in forwards;
   -webkit-animation-delay: 2.5s;
   animation-delay: 2.5s;
 }
 .page-wrapper.active .flip-book-category-anim-5 {
   opacity: 0;
-  animation: fadeInAnimation 0.5s ease-in forwards;
-  -webkit-animation: fadeInAnimation 0.5s ease-in forwards;
+  animation: fadeIn 0.5s ease-in forwards;
+  -webkit-animation: fadeIn 0.5s ease-in forwards;
   -webkit-animation-delay: 3s;
   animation-delay: 3s;
 }
 .page-wrapper.active .flip-book-category-anim-6 {
-  opacity: 0;
-  animation: fadeInAnimationLast 0.5s ease-in forwards;
-  -webkit-animation: fadeInAnimationLast 0.5s ease-in forwards;
+  animation: zoomIn 0.5s ease-in backwards;
+  -webkit-animation: zoomIn 0.5s ease-in backwards;
   animation-delay: 3.5s;
   -webkit-animation-delay: 3.5s;
 }
 .page-wrapper.active .flip-book-anim-24-2 {
   opacity: 0;
-  -webkit-animation: flipIntoLeft 1s 1 ease-in forwards;
-  animation: flipIntoLeft 1s 1 ease-in forwards;
-  animation-deplay: 0.5s;
-  -webkit-animation-delay: 0.5s;
+  -webkit-animation: fadeInLeft 0.8s 1 ease-in forwards;
+  animation: fadeInLeft 0.8s 1 ease-in forwards;
+  animation-deplay: 0.4s;
+  -webkit-animation-delay: 0.4s;
 }
 .page-wrapper.active .flip-book-anim-24-5 {
   opacity: 0;
-  -webkit-animation: flipIntoRight 1s 1 ease-in forwards;
-  animation: flipIntoRight 1s 1 ease-in forwards;
-  animation-deplay: 0.5s;
-  -webkit-animation-delay: 0.5s;
+  -webkit-animation: fadeInRight 0.8s 1 ease-in forwards;
+  animation: fadeInRight 0.8s 1 ease-in forwards;
+  animation-deplay: 0.4s;
+  -webkit-animation-delay: 0.4s;
 }
 .page-wrapper.active .flip-book-anim-24-1 {
   opacity: 0;
-  -webkit-animation: flipIntoLeft 1s 1 ease-in forwards;
-  animation: flipIntoLeft 1s 1 ease-in forwards;
-  animation-deplay: 0.75s;
-  -webkit-animation-delay: 0.75s;
+  -webkit-animation: fadeInLeft 0.8s 1 ease-in forwards;
+  animation: fadeInLeft 0.8s 1 ease-in forwards;
+  animation-deplay: 0.6s;
+  -webkit-animation-delay: 0.6s;
 }
 .page-wrapper.active .flip-book-anim-24-4 {
   opacity: 0;
-  -webkit-animation: flipIntoRight 1s 1 ease-in forwards;
-  animation: flipIntoRight 1s 1 ease-in forwards;
-  animation-deplay: 0.75s;
-  -webkit-animation-delay: 0.75s;
+  -webkit-animation: fadeInRight 0.8s 1 ease-in forwards;
+  animation: fadeInRight 0.8s 1 ease-in forwards;
+  animation-deplay: 0.6s;
+  -webkit-animation-delay: 0.6s;
 }
 .page-wrapper.active .flip-book-anim-24-3 {
   opacity: 0;
-  -webkit-animation: flipIntoRight 1s 1 ease-in forwards;
-  animation: flipIntoRight 1s 1 ease-in forwards;
-  animation-deplay: 1s;
-  -webkit-animation-delay: 1s;
+  -webkit-animation: fadeInRight 0.8s 1 ease-in forwards;
+  animation: fadeInRight 0.8s 1 ease-in forwards;
+  animation-deplay: 0.8s;
+  -webkit-animation-delay: 0.8s;
 }
 .page-wrapper.active .flip-s7-anim {
   opacity: 0;
-  -webkit-animation: fadeInAnimation 0.2s ease-in forwards;
-  animation: fadeInAnimation 0.2s ease-in forwards;
+  -webkit-animation: flipInX 1s ease forwards;
+  animation: flipInX 1s ease forwards;
 }
 .page-wrapper.active .flip-s7-anim--1 {
   animation-deplay: 0.7s;
@@ -785,6 +790,96 @@ li {
 .page-wrapper.active .flip-s7-anim--15 {
   animation-deplay: 3.5s;
   -webkit-animation-delay: 3.5s;
+}
+.page-wrapper.active .flip-s31-anim {
+  opacity: 0;
+  -webkit-animation: rollIn 1s ease forwards;
+  animation: rollIn 1s ease forwards;
+}
+.page-wrapper.active .flip-s31-anim--1 {
+  animation-deplay: 0.7s;
+  -webkit-animation-delay: 0.7s;
+}
+.page-wrapper.active .flip-s31-anim--2 {
+  animation-deplay: 1s;
+  -webkit-animation-delay: 1s;
+}
+.page-wrapper.active .flip-s31-anim--3 {
+  animation-deplay: 1.3s;
+  -webkit-animation-delay: 1.3s;
+}
+.page-wrapper.active .flip-s31-anim--4 {
+  animation-deplay: 1.6s;
+  -webkit-animation-delay: 1.6s;
+}
+.page-wrapper.active .flip-s31-anim--5 {
+  animation-deplay: 1.8s;
+  -webkit-animation-delay: 1.8s;
+}
+.page-wrapper.active .flip-s31-anim--6 {
+  animation-deplay: 2.1s;
+  -webkit-animation-delay: 2.1s;
+}
+.page-wrapper.active .flip-s31-anim--7 {
+  animation-deplay: 2.4s;
+  -webkit-animation-delay: 2.4s;
+}
+.page-wrapper.active .flip-s31-anim--8 {
+  animation-deplay: 2.7s;
+  -webkit-animation-delay: 2.7s;
+}
+.page-wrapper.active .flip-s31-anim--9 {
+  animation-deplay: 3s;
+  -webkit-animation-delay: 3s;
+}
+.page-wrapper.active .flip-s31-anim--10 {
+  animation-deplay: 3.3s;
+  -webkit-animation-delay: 3.4s;
+}
+.page-wrapper.active .flip-s31-anim--11 {
+  animation-deplay: 3.7s;
+  -webkit-animation-delay: 3.7s;
+}
+.page-wrapper.active .flip-s31-anim--12 {
+  animation-deplay: 4s;
+  -webkit-animation-delay: 4s;
+}
+.page-wrapper.active .flip-s31-anim--13 {
+  animation-deplay: 4.3s;
+  -webkit-animation-delay: 4.3s;
+}
+.page-wrapper.active .flip-s31-anim--14 {
+  animation-deplay: 4.6s;
+  -webkit-animation-delay: 4.6s;
+}
+.page-wrapper.active .flip-s31-anim--15 {
+  animation-deplay: 4.9s;
+  -webkit-animation-delay: 4.9s;
+}
+.page-wrapper.active .flip-s18-anim {
+  opacity: 0;
+  -webkit-animation: fadeInDown 1s ease forwards;
+  animation: fadeInDown 1s ease forwards;
+}
+.page-wrapper.active .flip-s18-anim--1 {
+  animation-deplay: 0.7s;
+  -webkit-animation-delay: 0.7s;
+}
+.page-wrapper.active .flip-s18-anim--2 {
+  animation-deplay: 1s;
+  -webkit-animation-delay: 1s;
+}
+.page-wrapper.active .flip-s18-anim--3 {
+  animation-deplay: 1.3s;
+  -webkit-animation-delay: 1.3s;
+}
+.page-wrapper.active .flip-s18-anim--4 {
+  animation-deplay: 1.6s;
+  -webkit-animation-delay: 1.6s;
+}
+.page-wrapper.active .flip-s18-anim--5 {
+  animation-deplay: 1.8s;
+  -webkit-animation-delay: 1.8s;
 }
 .c-header {
   position: absolute;
