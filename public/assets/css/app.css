@@ -856,7 +856,7 @@ li {
 }
 .c-header__menu ul li a {
   color: #969696;
-  font-size: 0.6rem;
+  font-size: 9px;
   text-decoration: none;
 }
 .c-header__menu ul li span {
