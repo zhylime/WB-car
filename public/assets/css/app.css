@@ -238,7 +238,7 @@
     opacity: 0;
   }
 }
-@-moz-keyframes ballAnimation {
+@-moz-keyframes ballAnimation1 {
   0% {
     opacity: 0;
     top: -22%;
@@ -247,19 +247,24 @@
   10% {
     opacity: 1;
   }
-  25% {
+  17% {
     top: 5%;
     left: 13%;
   }
-  50% {
+  35% {
     top: 28%;
     left: 30%;
   }
-  75% {
+  52% {
     top: 47%;
     left: 52%;
   }
-  90% {
+  70% {
+    opacity: 1;
+    top: 63%;
+    left: 82%;
+  }
+  99% {
     opacity: 1;
   }
   100% {
@@ -268,7 +273,7 @@
     left: 82%;
   }
 }
-@-webkit-keyframes ballAnimation {
+@-webkit-keyframes ballAnimation1 {
   0% {
     opacity: 0;
     top: -22%;
@@ -277,19 +282,24 @@
   10% {
     opacity: 1;
   }
-  25% {
+  17% {
     top: 5%;
     left: 13%;
   }
-  50% {
+  35% {
     top: 28%;
     left: 30%;
   }
-  75% {
+  52% {
     top: 47%;
     left: 52%;
   }
-  90% {
+  70% {
+    opacity: 1;
+    top: 63%;
+    left: 82%;
+  }
+  99% {
     opacity: 1;
   }
   100% {
@@ -298,7 +308,7 @@
     left: 82%;
   }
 }
-@-o-keyframes ballAnimation {
+@-o-keyframes ballAnimation1 {
   0% {
     opacity: 0;
     top: -22%;
@@ -307,19 +317,24 @@
   10% {
     opacity: 1;
   }
-  25% {
+  17% {
     top: 5%;
     left: 13%;
   }
-  50% {
+  35% {
     top: 28%;
     left: 30%;
   }
-  75% {
+  52% {
     top: 47%;
     left: 52%;
   }
-  90% {
+  70% {
+    opacity: 1;
+    top: 63%;
+    left: 82%;
+  }
+  99% {
     opacity: 1;
   }
   100% {
@@ -328,7 +343,7 @@
     left: 82%;
   }
 }
-@keyframes ballAnimation {
+@keyframes ballAnimation1 {
   0% {
     opacity: 0;
     top: -22%;
@@ -337,19 +352,96 @@
   10% {
     opacity: 1;
   }
-  25% {
+  17% {
     top: 5%;
     left: 13%;
   }
-  50% {
+  35% {
     top: 28%;
     left: 30%;
   }
-  75% {
+  52% {
     top: 47%;
     left: 52%;
   }
-  90% {
+  70% {
+    opacity: 1;
+    top: 63%;
+    left: 82%;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 63%;
+    left: 82%;
+  }
+}
+@-moz-keyframes ballAnimation2 {
+  0% {
+    opacity: 0;
+    top: -22%;
+    left: -1%;
+  }
+  10% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 63%;
+    left: 82%;
+  }
+}
+@-webkit-keyframes ballAnimation2 {
+  0% {
+    opacity: 0;
+    top: -22%;
+    left: -1%;
+  }
+  10% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 63%;
+    left: 82%;
+  }
+}
+@-o-keyframes ballAnimation2 {
+  0% {
+    opacity: 0;
+    top: -22%;
+    left: -1%;
+  }
+  10% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 63%;
+    left: 82%;
+  }
+}
+@keyframes ballAnimation2 {
+  0% {
+    opacity: 0;
+    top: -22%;
+    left: -1%;
+  }
+  10% {
+    opacity: 1;
+  }
+  99% {
     opacity: 1;
   }
   100% {
@@ -498,6 +590,54 @@
     left: 0;
   }
 }
+@-moz-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -50%, 0);
+    transform: translate3d(0, -50%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -50%, 0);
+    transform: translate3d(0, -50%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@-o-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -50%, 0);
+    transform: translate3d(0, -50%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -50%, 0);
+    transform: translate3d(0, -50%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
 .bg-lily-white {
   background: #ededed;
 }
@@ -619,9 +759,15 @@ li {
   top: -22%;
   left: -1%;
 }
-.page-wrapper.active .flip-ball-anim {
+.page-wrapper.active .flip-ball-anim-1 {
   opacity: 0;
-  animation: ballAnimation 1.5s linear infinite;
+  animation: ballAnimation1 1.5s linear infinite;
+  animation-delay: 0.6s;
+  -webkit-animation-delay: 0.6s;
+}
+.page-wrapper.active .flip-ball-anim-2 {
+  opacity: 0;
+  animation: ballAnimation2 1.5s linear infinite;
   animation-delay: 0.6s;
   -webkit-animation-delay: 0.6s;
 }

@@ -70,7 +70,7 @@
 //     // transform rotate(1080deg)
 //     top 73%
 //     left 91%
-@keyframes ballAnimation
+@keyframes ballAnimation1
   0%
     opacity 0
     // transform rotate(0)
@@ -78,23 +78,40 @@
     left -1%
   10%
     opacity 1
-  25%
+  17%
     // transform rotate(270deg)
     top 5%
     left 13%
-  50%
+  35%
     // transform rotate(540deg)
     top 28%
     left 30%
-  75%
+  52%
     // transform rotate(810deg)
     top 47%
     left 52%
-  90%
+  70%
+    opacity 1
+    top 63%
+    left 82%
+  99%
     opacity 1
   100%
     opacity 0
     // transform rotate(1080deg)
+    top 63%
+    left 82%
+@keyframes ballAnimation2
+  0%
+    opacity 0
+    top -22%
+    left -1%
+  10%
+    opacity 1
+  99%
+    opacity 1
+  100%
+    opacity 0
     top 63%
     left 82%
 
@@ -123,3 +140,18 @@
   100%
     opacity 1
     left 0
+
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -50%, 0);
+    transform: translate3d(0, -50%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
