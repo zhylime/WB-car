@@ -632,7 +632,7 @@
 				el.css({
 					position : 'absolute',
 					top  : (viewport.h * 0.5) + viewport.y,
-					left : 0
+					left : (viewport.w * 0.5) + viewport.x
 				});
 			}
 
@@ -1278,12 +1278,12 @@
 			origMaxHeight = maxHeight;
 
 			if (current.fitToView) {
-				maxWidth  = Math.min(viewport.w);
-				maxHeight = Math.min(viewport.h);
+				maxWidth  = Math.min(viewport.w - wSpace, maxWidth);
+				maxHeight = Math.min(viewport.h - hSpace, maxHeight);
 			}
 
-			maxWidth_  = viewport.w;
-			maxHeight_ = viewport.h;
+			maxWidth_  = viewport.w - wMargin;
+			maxHeight_ = viewport.h - hMargin;
 
 			if (current.aspectRatio) {
 				if (width > maxWidth) {
@@ -1356,8 +1356,8 @@
 					}
 
 				} else {
-					width  = Math.max(minWidth,  Math.max(width,  width  - (width_  - maxWidth_)));
-					height = Math.max(minHeight, Math.max(height, height - (height_ - maxHeight_)));
+					width  = Math.max(minWidth,  Math.min(width,  width  - (width_  - maxWidth_)));
+					height = Math.max(minHeight, Math.min(height, height - (height_ - maxHeight_)));
 				}
 			}
 
@@ -1403,8 +1403,8 @@
 				height   = F.wrap.height() + margin[0] + margin[2],
 				rez      = {
 					position: 'absolute',
-					top  : 0,
-					left : 0
+					top  : margin[0],
+					left : margin[3]
 				};
 
 			if (current.autoCenter && current.fixed && !onlyAbsolute && height <= viewport.h && width <= viewport.w) {
