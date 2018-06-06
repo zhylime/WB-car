@@ -71,7 +71,6 @@ $(document).ready(function () {
             $('.page-wrapper[page="' + page + '"]').addClass('active');
           },
           turned: function turned(e, page, view) {
-            $('.js-flip-btn').show();
             if (page == 38) {
               $('.js-flip-btn').hide();
             } else {
@@ -80,7 +79,7 @@ $(document).ready(function () {
             $(".fancybox").fancybox({
               closeBtn: false,
               openEffect: 'elastic',
-              width: false,
+              width: 'auto',
               height: false,
               helpers: {
                 overlay: {
