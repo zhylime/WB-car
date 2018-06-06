@@ -28,8 +28,9 @@
     background $col-grey
 .isIphoneX
   section.p24
-    top: 10px!important;
-
+    top 10px !important
+.flip-fancybox
+  transform rotate(90deg)
 .flip-icon
   width 40px
   height 40px
@@ -95,7 +96,12 @@
   width 128px
   top 70%
   left 57%
-
+.page-wrapper.active .flip-book-category-anim
+  opacity 0
+  animation fadeInAnimation 0.4s ease-in forwards
+  -webkit-animation fadeInAnimation 0.4s ease-in forwards
+  animation-deplay .6s
+  -webkit-animation-delay .6s
 .page-wrapper.active .flip-book-category-anim-1
   opacity 0
   animation fadeIn 1s 1 ease-in forwards
@@ -133,39 +139,39 @@
   -webkit-animation-delay 3s
 .page-wrapper.active .flip-book-anim-24-2
   opacity 0
-  -webkit-animation flipIntoLeft .6s 1 ease-in forwards
-  animation flipIntoLeft .6s 1 ease-in forwards
+  -webkit-animation flipIntoLeft .4s 1 ease-in forwards
+  animation flipIntoLeft .4s 1 ease-in forwards
   animation-deplay .6s
   -webkit-animation-delay .6s
 .page-wrapper.active .flip-book-anim-24-5
   opacity 0
-  -webkit-animation flipIntoRight .6s 1 ease-in forwards
-  animation flipIntoRight .6s 1 ease-in forwards
+  -webkit-animation flipIntoRight .4s 1 ease-in forwards
+  animation flipIntoRight .4s 1 ease-in forwards
   animation-deplay .6s
   -webkit-animation-delay .6s
 .page-wrapper.active .flip-book-anim-24-1
   opacity 0
-  -webkit-animation flipIntoLeft .6s 1 ease-in forwards
-  animation flipIntoLeft .6s 1 ease-in forwards
-  animation-deplay .9s
-  -webkit-animation-delay .9s
+  -webkit-animation flipIntoLeft .4s 1 ease-in forwards
+  animation flipIntoLeft .4s 1 ease-in forwards
+  animation-deplay .8s
+  -webkit-animation-delay .8s
 .page-wrapper.active .flip-book-anim-24-4
   opacity 0
-  -webkit-animation flipIntoRight .8s 1 ease-in forwards
-  animation flipIntoRight .8s 1 ease-in forwards
-  animation-deplay .9s
-  -webkit-animation-delay .9s
+  -webkit-animation flipIntoRight .4s 1 ease-in forwards
+  animation flipIntoRight .4s 1 ease-in forwards
+  animation-deplay .8s
+  -webkit-animation-delay .8s
 .page-wrapper.active .flip-book-anim-24-3
   opacity 0
-  -webkit-animation flipIntoRight .6s 1 ease-in forwards
+  -webkit-animation flipIntoRight .4s 1 ease-in forwards
   animation flipIntoRight .6s 1 ease-in forwards
-  animation-deplay 1.2s
-  -webkit-animation-delay 1.2s
+  animation-deplay 1s
+  -webkit-animation-delay 1s
 // 
 .page-wrapper.active .flip-s7-anim
   opacity 0
-  -webkit-animation flipInX 1s ease forwards
-  animation flipInX 1s ease forwards
+  -webkit-animation zoomIn 1s forwards
+  animation zoomIn 1s forwards
   &--1
     animation-deplay .7s
     -webkit-animation-delay .7s

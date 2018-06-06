@@ -48,6 +48,8 @@ $(document).ready(function(){
 						$(".fancybox").fancybox({
 							closeBtn: false,
 							openEffect: 'elastic',
+              width: false,
+              height: false,
 							helpers : {
 								overlay : {
 									css : {
@@ -76,8 +78,6 @@ $(document).ready(function(){
 				}
 			});
 		}
-    // updateMenu(_page)
-
 	}
   function header(){
     $('header ul li a').each(function(){
