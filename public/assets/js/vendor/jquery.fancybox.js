@@ -1218,7 +1218,6 @@
 
 			origWidth  = isPercentage(width)  ? (viewport.w - wSpace) * getScalar(width)  / 100 : width;
 			origHeight = isPercentage(height) ? (viewport.h - hSpace) * getScalar(height) / 100 : height;
-			console.log(viewport.w,wSpace,width,origWidth);
 			if (current.type === 'iframe') {
 				iframe = current.content;
 
