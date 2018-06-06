@@ -87,7 +87,7 @@ $(document).ready(function() {
 		}
 		function checkFull() {
 			var explorer = window.navigator.userAgent.toLowerCase();
-			console.log(window.screen.width, window.outerWidth, window.screen.height, window.outerHeight)
+			// console.log(window.screen.width, window.outerWidth, window.screen.height, window.outerHeight)
 			if(explorer.indexOf('chrome') > 0) { //chrome
 				if((window.screen.width - window.outerWidth <= 17) && (window.screen.height - window.outerHeight <= 17)) {
 					return true;
@@ -176,7 +176,7 @@ $(document).ready(function() {
 		if(!src) {
 			alert("未添加视频链接");
 		}
-		console.log(src);
+		// console.log(src);
 		var menu=["<div class='video-definition video-tooltip '>",
 			"<button class='video-button video-tooltip-toggle video-definition-button'>",
 			"<span>"+dangqian+"</span>",
@@ -265,16 +265,16 @@ $(document).ready(function() {
 
 		/*视频缓存成功可以获取长度和播放*/
 		eventTester("waiting", meido, function() {
-			console.log(" 等待数据，并非错误");
+			// console.log(" 等待数据，并非错误");
 			$(".video-loading").removeClass("yihuanchun");
 		});
 		eventTester("playing", meido, function() {
-			console.log("播放了");
+			// console.log("播放了");
 			videobox.addClass("video-playing").removeClass("video-pause");
 			$(".video-loading").addClass("yihuanchun");
 		});
 		eventTester("stalled", meido, function() {
-			console.log("/网速失速");
+			// console.log("/网速失速");
 		});
 		eventTester("ended", meido, function() {
 			//console.log("播放结束");
@@ -301,7 +301,7 @@ $(document).ready(function() {
 		})
 		eventTester("progress",meido,function(){
 			$(".video-container",videobox).addClass("video-ready");
-			console.log("客户端正在请求数据")
+			// console.log("客户端正在请求数据")
 		})
 		/*进度相关*/
 		eventTester("timeupdate", meido, function() {

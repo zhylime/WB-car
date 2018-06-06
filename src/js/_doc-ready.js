@@ -5,48 +5,45 @@ $(document).ready(function(){
       menu2 = 35,
       menu3 = 36;
   var menuArray = [1, 35, 36];
+  
 
-
-  checkIphoneX();
+  
+  var playingVideo = false;
+  checkDevice();
   loadFlipBook();
   header();
   events();
+  
   function checkDevice(){
-  var events = navigator.userAgent;
+    var deviceInfo = device();
+    $('html').addClass(deviceInfo);
 
-  if(events.indexOf('Android')>-1 || events.indexOf('Linux')>-1 || events.indexOf('Adr')>-1){
-        return 'isAndroid';
-    }else if(events.indexOf('iPhone')>-1){
-        //根据尺寸进行判断 苹果的型号
-        if(screen.height == 812 && screen.width == 375){
-            return 'isIphoneX'
-        }else if(screen.height == 736 && screen.width == 414){
-            console.log("iPhone7P - iPhone8P - iPhone6");
-        }else if(screen.height == 667 && screen.width == 375){
-            console.log("iPhone7 - iPhone8 - iPhone6");
-        }else if(screen.height == 568 && screen.width == 320){
-            return 'isIphone5'
-        }else{
-            console.log("iPhone4");
-        }
-    }else if(events.indexOf('Windows Phone')>-1){
-        // console.log("诺基亚手机");
-        
-    }else if(events.indexOf("iPad")>-1){
-        // console.log("平板");
-    }
-}
-  function checkIphoneX(){
-    // isX = isIphoneX();
-    var device = checkDevice();
-    $('html').addClass(device);
-    // if(isX){
-    //   $('html').addClass('isIphoneX');
-    // }
   }
-  // function isIphoneX(){
-  //   return /iphone/gi.test(navigator.userAgent) && (screen.height == 812 && screen.width == 375)
-  // }
+  function device(){
+    var events = navigator.userAgent;
+
+    if(events.indexOf('Android')>-1 || events.indexOf('Linux')>-1 || events.indexOf('Adr')>-1){
+      return 'isAndroid';
+    }else if(events.indexOf('iPhone')>-1){
+      //根据尺寸进行判断 苹果的型号
+      if(screen.height == 812 && screen.width == 375){
+          return 'isIphoneX'
+      }else if(screen.height == 736 && screen.width == 414){
+          console.log("iPhone7P - iPhone8P - iPhone6");
+      }else if(screen.height == 667 && screen.width == 375){
+          console.log("iPhone7 - iPhone8 - iPhone6");
+      }else if(screen.height == 568 && screen.width == 320){
+          return 'isIphone5'
+      }else{
+          console.log("iPhone4");
+      }
+    }else if(events.indexOf('Windows Phone')>-1){
+            // console.log("诺基亚手机");
+            
+    }else if(events.indexOf("iPad")>-1){
+            // console.log("平板");
+    }
+  }
 	function loadFlipBook(){
 		let w = $(window).width();
 		let h = $(window).height();
@@ -70,6 +67,7 @@ $(document).ready(function(){
 						$('.page-wrapper[page="' + page + '"]').addClass('active');
 					},
 					turned: function (e, page, view) {
+            _page = page;
 						if (page == 38) {
 							$('.js-flip-btn').hide();
 						}else {
@@ -97,14 +95,16 @@ $(document).ready(function(){
 						});
 
 						$('.js-m-video').on('click touchend', function(e){
+              playingVideo = true;
 							const url = $(e.currentTarget).data('src');
 							if(url !=='') {
 								$('.m-video').attr('data-src', url);
 								$('.m-video').trigger('click');
 							}
+              closeVideo();
 						});
 
-            updateMenu(page)
+            updateMenu(page);
 					}
 				}
 			});
@@ -126,31 +126,26 @@ $(document).ready(function(){
   }
 
   function events(){
-    // $('body').on('swipeleft', function(){
-    //   $('.js-flip-book').turn('next');
-
-    // });
-    // $('body').on('swiperight', function(){
-    //   $(".js-flip-book").turn('previous');
-    // });
     var startX;
     var endX;
     var distanceX;
-    var moving=false;
+    var moving = false;
      $('body').bind('touchstart',function(e){
-        // console.log(e.target);
-        if(!$(e.target).hasClass('js-flip-btn')){
+        endX = 0;
+        startX = 0;
+        if(!$(e.target).hasClass('js-flip-btn') && !$(e.target).hasClass('fancybox-image') && !playingVideo){
           moving = true;
           startX = e.originalEvent.changedTouches[0].pageX;
         }
-        
         else{
           moving = false;
         }
+        // console.log(moving);
 
     });
     $("body").bind("touchmove",function(e){
         //获取滑动屏幕时的X,Y
+        // console.log(e.originalEvent.changedTouches[0].pageX)
         if(moving){
           endX = e.originalEvent.changedTouches[0].pageX;
           //获取滑动距离
@@ -162,12 +157,14 @@ $(document).ready(function(){
         
       });
     $('body').bind("touchend", function(e){
-      if(moving){
-        if( distanceX>0){
-            console.log('往右滑动');
+      // console.log("startX:" + startX);
+
+      if(moving && endX!==0){
+        if( distanceX>10){
+            // console.log('往右滑动');
             $(".js-flip-book").turn('previous');
-        }else if(distanceX<0){
-            console.log('往左滑动');
+        }else if(distanceX<-10){
+            // console.log('往左滑动');
             $(".js-flip-book").turn('next');
         }
       }
@@ -200,6 +197,12 @@ $(document).ready(function(){
       $('header ul li:nth-of-type(3)').addClass('active');
     }
 
+  }
+
+  function closeVideo(){
+    $(".video-close").on("click touchstart", function() {
+      playingVideo = false;
+    });
   }
 
 });

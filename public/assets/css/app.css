@@ -1386,3 +1386,14 @@ li {
   top: 10%;
   left: 77%;
 }
+.video-note {
+  bottom: 30%;
+  left: 12%;
+  font-size: 10px;
+  color: #dcdddd;
+  text-shadow: 1px 1px 1px #000;
+}
+#p23 .video-note {
+  bottom: 14%;
+  left: 7%;
+}

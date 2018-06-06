@@ -8,11 +8,17 @@ $(document).ready(function () {
       menu3 = 36;
   var menuArray = [1, 35, 36];
 
-  checkIphoneX();
+  var playingVideo = false;
+  checkDevice();
   loadFlipBook();
   header();
   events();
+
   function checkDevice() {
+    var deviceInfo = device();
+    $('html').addClass(deviceInfo);
+  }
+  function device() {
     var events = navigator.userAgent;
 
     if (events.indexOf('Android') > -1 || events.indexOf('Linux') > -1 || events.indexOf('Adr') > -1) {
@@ -37,17 +43,6 @@ $(document).ready(function () {
       // console.log("平板");
     }
   }
-  function checkIphoneX() {
-    // isX = isIphoneX();
-    var device = checkDevice();
-    $('html').addClass(device);
-    // if(isX){
-    //   $('html').addClass('isIphoneX');
-    // }
-  }
-  // function isIphoneX(){
-  //   return /iphone/gi.test(navigator.userAgent) && (screen.height == 812 && screen.width == 375)
-  // }
   function loadFlipBook() {
     var w = $(window).width();
     var h = $(window).height();
@@ -71,6 +66,7 @@ $(document).ready(function () {
             $('.page-wrapper[page="' + page + '"]').addClass('active');
           },
           turned: function turned(e, page, view) {
+            _page = page;
             if (page == 38) {
               $('.js-flip-btn').hide();
             } else {
@@ -97,11 +93,13 @@ $(document).ready(function () {
             });
 
             $('.js-m-video').on('click touchend', function (e) {
+              playingVideo = true;
               var url = $(e.currentTarget).data('src');
               if (url !== '') {
                 $('.m-video').attr('data-src', url);
                 $('.m-video').trigger('click');
               }
+              closeVideo();
             });
 
             updateMenu(page);
@@ -126,28 +124,24 @@ $(document).ready(function () {
   }
 
   function events() {
-    // $('body').on('swipeleft', function(){
-    //   $('.js-flip-book').turn('next');
-
-    // });
-    // $('body').on('swiperight', function(){
-    //   $(".js-flip-book").turn('previous');
-    // });
     var startX;
     var endX;
     var distanceX;
     var moving = false;
     $('body').bind('touchstart', function (e) {
-      // console.log(e.target);
-      if (!$(e.target).hasClass('js-flip-btn')) {
+      endX = 0;
+      startX = 0;
+      if (!$(e.target).hasClass('js-flip-btn') && !$(e.target).hasClass('fancybox-image') && !playingVideo) {
         moving = true;
         startX = e.originalEvent.changedTouches[0].pageX;
       } else {
         moving = false;
       }
+      // console.log(moving);
     });
     $("body").bind("touchmove", function (e) {
       //获取滑动屏幕时的X,Y
+      // console.log(e.originalEvent.changedTouches[0].pageX)
       if (moving) {
         endX = e.originalEvent.changedTouches[0].pageX;
         //获取滑动距离
@@ -157,12 +151,14 @@ $(document).ready(function () {
       }
     });
     $('body').bind("touchend", function (e) {
-      if (moving) {
-        if (distanceX > 0) {
-          console.log('往右滑动');
+      // console.log("startX:" + startX);
+
+      if (moving && endX !== 0) {
+        if (distanceX > 10) {
+          // console.log('往右滑动');
           $(".js-flip-book").turn('previous');
-        } else if (distanceX < 0) {
-          console.log('往左滑动');
+        } else if (distanceX < -10) {
+          // console.log('往左滑动');
           $(".js-flip-book").turn('next');
         }
       }
@@ -191,5 +187,11 @@ $(document).ready(function () {
     } else {
       $('header ul li:nth-of-type(3)').addClass('active');
     }
+  }
+
+  function closeVideo() {
+    $(".video-close").on("click touchstart", function () {
+      playingVideo = false;
+    });
   }
 });
