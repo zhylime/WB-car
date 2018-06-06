@@ -7,7 +7,6 @@ $(document).ready(function () {
       menu2 = 35,
       menu3 = 36;
   var menuArray = [1, 35, 36];
-  var isX;
 
   checkIphoneX();
   loadFlipBook();
@@ -46,10 +45,9 @@ $(document).ready(function () {
     //   $('html').addClass('isIphoneX');
     // }
   }
-  function isIphoneX() {
-    return (/iphone/gi.test(navigator.userAgent) && screen.height == 812 && screen.width == 375
-    );
-  }
+  // function isIphoneX(){
+  //   return /iphone/gi.test(navigator.userAgent) && (screen.height == 812 && screen.width == 375)
+  // }
   function loadFlipBook() {
     var w = $(window).width();
     var h = $(window).height();
@@ -128,6 +126,12 @@ $(document).ready(function () {
   }
 
   function events() {
+    $('body').on('swipeleft', function () {
+      $(".js-flip-book").turn('next');
+    });
+    $('body').on('swiperight', function () {
+      $(".js-flip-book").turn('previous');
+    });
     $('.js-flip-btn').on('click touchend', function (e) {
       e.preventDefault();
       _page++;
@@ -154,70 +158,3 @@ $(document).ready(function () {
     }
   }
 });
-'use strict';
-
-var weixin_jssdk_ops = {
-    init: function init() {
-        this.initJSconfig();
-    },
-    shareCbf: function shareCbf() {},
-    friTitle: '宝沃品牌圣经',
-    friDesc: '中国新造车势力X-Force',
-    initJSconfig: function initJSconfig() {
-        $.ajax({
-            url: 'https://api.happy-share.cn/jssdk/?url=' + encodeURIComponent(location.href.split('#')[0]),
-            type: 'GET',
-            dataType: 'json',
-            success: function success(data) {
-                if (data.code == 200) {
-                    var appId = data.data.appId;
-                    var timestamp = data.data.timestamp;
-                    var nonceStr = data.data.nonceStr;
-                    var signature = data.data.signature;
-                    wx.config({
-                        debug: false,
-                        appId: appId,
-                        timestamp: timestamp,
-                        nonceStr: nonceStr,
-                        signature: signature,
-                        jsApiList: ['onMenuShareTimeline', 'onMenuShareAppMessage']
-                    });
-                    weixin_jssdk_ops.ready();
-                    wx.error(function (res) {
-                        //console.log(res);
-                    });
-                }
-            }
-        });
-    },
-    ready: function ready() {
-        wx.ready(function () {
-            var img = '../img/bw_logo.jpg';
-            var link = window.location.href;
-
-            wx.onMenuShareTimeline({
-                title: weixin_jssdk_ops.friTitle,
-                imgUrl: img,
-                link: link,
-                success: function success() {
-                    weixin_jssdk_ops.shareCbf();
-                },
-                cancel: function cancel() {}
-            });
-            wx.onMenuShareAppMessage({
-                title: weixin_jssdk_ops.friTitle,
-                desc: weixin_jssdk_ops.friDesc,
-                link: link,
-                imgUrl: img,
-                type: 'link',
-                success: function success() {},
-                cancel: function cancel() {}
-            });
-        });
-    },
-    hideMenuItems: function hideMenuItems() {
-        wx.ready(function () {
-            wx.hideAllNonBaseMenuItem();
-        });
-    }
-};

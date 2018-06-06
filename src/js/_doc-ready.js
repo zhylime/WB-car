@@ -5,7 +5,7 @@ $(document).ready(function(){
       menu2 = 35,
       menu3 = 36;
   var menuArray = [1, 35, 36];
-  var isX;
+
 
   checkIphoneX();
   loadFlipBook();
@@ -44,9 +44,9 @@ $(document).ready(function(){
     //   $('html').addClass('isIphoneX');
     // }
   }
-  function isIphoneX(){
-    return /iphone/gi.test(navigator.userAgent) && (screen.height == 812 && screen.width == 375)
-  }
+  // function isIphoneX(){
+  //   return /iphone/gi.test(navigator.userAgent) && (screen.height == 812 && screen.width == 375)
+  // }
 	function loadFlipBook(){
 		let w = $(window).width();
 		let h = $(window).height();
@@ -122,13 +122,16 @@ $(document).ready(function(){
         $('.page-wrapper[page="' + _page + '"]').addClass('active');
         updateMenu(_page);
       });
-
-      
-
     });
   }
 
   function events(){
+    $('body').on('swipeleft', function(){
+      $(".js-flip-book").turn('next');
+    });
+    $('body').on('swiperight', function(){
+      $(".js-flip-book").turn('previous');
+    });
     $('.js-flip-btn').on('click touchend', function(e){
       e.preventDefault();
       _page++;
