@@ -1244,62 +1244,62 @@ li {
   -webkit-animation-delay: 1.6s;
 }
 .page-wrapper.active .flip-s31-anim--6 {
-  animation-deplay: 1.4s;
-  -webkit-animation-delay: 1.4s;
+  animation-deplay: 0.7s;
+  -webkit-animation-delay: 0.7s;
 }
 .page-wrapper.active .flip-s31-anim--7 {
   animation-deplay: 2.4s;
   -webkit-animation-delay: 2.4s;
 }
 .page-wrapper.active .flip-s31-anim--9 {
-  animation-deplay: 2.1s;
-  -webkit-animation-delay: 2.1s;
+  animation-deplay: 0.7s;
+  -webkit-animation-delay: 0.7s;
 }
 .page-wrapper.active .flip-s31-anim--10 {
   animation-deplay: 3.3s;
   -webkit-animation-delay: 3.4s;
 }
 .page-wrapper.active .flip-s31-anim--12 {
-  animation-deplay: 2.8s;
-  -webkit-animation-delay: 2.8s;
+  animation-deplay: 0.7s;
+  -webkit-animation-delay: 0.7s;
 }
 .page-wrapper.active .flip-s31-anim--13 {
   animation-deplay: 4.2s;
   -webkit-animation-delay: 4.2s;
 }
 .page-wrapper.active .flip-s31-anim--15 {
-  animation-deplay: 3.5s;
-  -webkit-animation-delay: 3.5s;
+  animation-deplay: 0.7s;
+  -webkit-animation-delay: 0.7s;
 }
 .page-wrapper.active .flip-s31-anim1 {
   opacity: 0;
-  -webkit-animation: fadeIn 0.6s 1 ease forwards;
-  animation: fadeIn 0.6s 1 ease forwards;
+  -webkit-animation: fadeInRight 0.6s 1 ease forwards;
+  animation: fadeInRight 0.6s 1 ease forwards;
 }
 .page-wrapper.active .flip-s31-anim1--5 {
   animation-deplay: 1.4s;
   -webkit-animation-delay: 1.4s;
 }
 .page-wrapper.active .flip-s31-anim1--11 {
-  animation-deplay: 2.8s;
-  -webkit-animation-delay: 2.8s;
+  animation-deplay: 1.4s;
+  -webkit-animation-delay: 1, 4s;
 }
 .page-wrapper.active .flip-s31-anim2 {
   opacity: 0;
-  -webkit-animation: fadeIn 0.6s 1 ease forwards;
-  animation: fadeIn 0.6s 1 ease forwards;
+  -webkit-animation: fadeInLeft 0.6s 1 ease forwards;
+  animation: fadeInLeft 0.6s 1 ease forwards;
 }
 .page-wrapper.active .flip-s31-anim2--2 {
-  animation-deplay: 0.7s;
-  -webkit-animation-delay: 0.7s;
+  animation-deplay: 1.4s;
+  -webkit-animation-delay: 1.4s;
 }
 .page-wrapper.active .flip-s31-anim2--8 {
-  animation-deplay: 2.1s;
-  -webkit-animation-delay: 2.1s;
+  animation-deplay: 1.4s;
+  -webkit-animation-delay: 1.4s;
 }
 .page-wrapper.active .flip-s31-anim2--14 {
-  animation-deplay: 3.5s;
-  -webkit-animation-delay: 3.5s;
+  animation-deplay: 1.4s;
+  -webkit-animation-delay: 1.4s;
 }
 .page-wrapper.active .flip-s18-anim {
   opacity: 0;
