@@ -78,7 +78,7 @@ $(document).ready(function(){
 						$(".fancybox").fancybox({
 							closeBtn: false,
 							openEffect: 'elastic',
-              width: false,
+              width: 'auto',
               height: false,
 							helpers : {
 								overlay : {
