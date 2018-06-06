@@ -70,7 +70,6 @@ $(document).ready(function(){
 						$('.page-wrapper[page="' + page + '"]').addClass('active');
 					},
 					turned: function (e, page, view) {
-						$('.js-flip-btn').show();
 						if (page == 38) {
 							$('.js-flip-btn').hide();
 						}else {
