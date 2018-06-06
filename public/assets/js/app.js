@@ -81,6 +81,7 @@ $(document).ready(function () {
               openEffect: 'elastic',
               width: 'auto',
               height: false,
+              margin: 0,
               helpers: {
                 overlay: {
                   css: {
