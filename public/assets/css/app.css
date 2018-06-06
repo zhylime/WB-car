@@ -948,6 +948,9 @@ li {
 .pos-rel {
   position: relative;
 }
+.hide {
+  display: none;
+}
 .l-w--100p {
   width: 100%;
 }
