@@ -1343,7 +1343,7 @@ li {
 }
 .c-header__menu ul li a {
   color: #969696;
-  font-size: 10px;
+  font-size: 11px;
   text-decoration: none;
 }
 .c-header__menu ul li span {
@@ -1353,6 +1353,9 @@ li {
   color: #000;
   font-weight: bold;
   text-decoration: none;
+}
+.isIphone5 .c-header__menu ul li a {
+  font-size: 8px;
 }
 .bw-video {
   width: 7%;

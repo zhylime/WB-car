@@ -11,11 +11,38 @@ $(document).ready(function(){
   loadFlipBook();
   header();
   events();
-  function checkIphoneX(){
-    isX = isIphoneX();
-    if(isX){
-      $('html').addClass('isIphoneX');
+  function checkDevice(){
+  var events = navigator.userAgent;
+
+  if(events.indexOf('Android')>-1 || events.indexOf('Linux')>-1 || events.indexOf('Adr')>-1){
+        return 'isAndroid';
+    }else if(events.indexOf('iPhone')>-1){
+        //根据尺寸进行判断 苹果的型号
+        if(screen.height == 812 && screen.width == 375){
+            return 'isIphoneX'
+        }else if(screen.height == 736 && screen.width == 414){
+            console.log("iPhone7P - iPhone8P - iPhone6");
+        }else if(screen.height == 667 && screen.width == 375){
+            console.log("iPhone7 - iPhone8 - iPhone6");
+        }else if(screen.height == 568 && screen.width == 320){
+            return 'isIphone5'
+        }else{
+            console.log("iPhone4");
+        }
+    }else if(events.indexOf('Windows Phone')>-1){
+        // console.log("诺基亚手机");
+        
+    }else if(events.indexOf("iPad")>-1){
+        // console.log("平板");
     }
+}
+  function checkIphoneX(){
+    // isX = isIphoneX();
+    var device = checkDevice();
+    $('html').addClass(device);
+    // if(isX){
+    //   $('html').addClass('isIphoneX');
+    // }
   }
   function isIphoneX(){
     return /iphone/gi.test(navigator.userAgent) && (screen.height == 812 && screen.width == 375)
