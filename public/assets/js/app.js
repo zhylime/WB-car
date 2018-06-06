@@ -135,24 +135,35 @@ $(document).ready(function () {
     var startX;
     var endX;
     var distanceX;
+    var moving = false;
     $('body').bind('touchstart', function (e) {
-      startX = e.originalEvent.changedTouches[0].pageX;
+      // console.log(e.target);
+      if (!$(e.target).hasClass('js-flip-btn')) {
+        moving = true;
+        startX = e.originalEvent.changedTouches[0].pageX;
+      } else {
+        moving = false;
+      }
     });
     $("body").bind("touchmove", function (e) {
       //获取滑动屏幕时的X,Y
-      endX = e.originalEvent.changedTouches[0].pageX;
-      //获取滑动距离
-      distanceX = endX - startX;
-      // distanceY = endY-startY;
-      //判断滑动方向
+      if (moving) {
+        endX = e.originalEvent.changedTouches[0].pageX;
+        //获取滑动距离
+        distanceX = endX - startX;
+        // distanceY = endY-startY;
+        //判断滑动方向
+      }
     });
     $('body').bind("touchend", function (e) {
-      if (distanceX > 0) {
-        console.log('往右滑动');
-        $(".js-flip-book").turn('previous');
-      } else if (distanceX < 0) {
-        console.log('往左滑动');
-        $(".js-flip-book").turn('next');
+      if (moving) {
+        if (distanceX > 0) {
+          console.log('往右滑动');
+          $(".js-flip-book").turn('previous');
+        } else if (distanceX < 0) {
+          console.log('往左滑动');
+          $(".js-flip-book").turn('next');
+        }
       }
     });
     $('.js-flip-btn').on('click touchend', function (e) {
