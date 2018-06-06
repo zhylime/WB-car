@@ -35,11 +35,15 @@ $(document).ready(function(){
 				autoCenter: true,
 				display: 'single',
 				when: {
+					start: function () {
+						$('.js-flip-btn').hide();
+					},
 					turning: function (e, page, view){
 						$('.page-wrapper').removeClass('active');
 						$('.page-wrapper[page="' + page + '"]').addClass('active');
 					},
 					turned: function (e, page, view) {
+						$('.js-flip-btn').show();
 						if (page == 38) {
 							$('.js-flip-btn').hide();
 						}else {
