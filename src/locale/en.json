@@ -1,15 +1,15 @@
 {
   "app":{
-    "name":"宝沃品牌圣经",
-    "description": "中国新造车势力X-Force",
-    "keywords": "宝沃, 中国新造车势力, X-Force, 安全未来"
+    "name":"宝沃圣经 (V1.0)",
+    "description": "中国新力量X-FORCE",
+    "keywords": "宝沃, 中国新力量, X-FORCE, 安全未来"
   },
   "headerMenu":[
     {
-      "txt": "中国新势力X-Force"
+      "txt": "中国新力量X-FORCE"
     },
     {
-      "txt": "宝沃的车主"
+      "txt": "宝沃车主"
     },
     {
       "txt": "宝沃安全未来"
