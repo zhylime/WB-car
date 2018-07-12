@@ -1,6 +1,6 @@
 .c-header
   position absolute
-  height 60px
+  height 50px
   width 100%
   z-index 1000
   &__border
@@ -13,18 +13,19 @@
     position relative
     background black
     height 100%
-    padding 10px 0 10px 40px
+    padding 10px 0 10px 20px
     img
-      height calc(100% - 10px)
+      // height calc(100% - 10px)
+      height 100%
     .c-header__border
       background $col-athens-grey
   &__menu
     position absolute
-    padding 20px
+    padding 0 0 0 10px
     background $col-athens-grey
     right 0
     top 0
-    width 80%
+    width 85%
     height 100%
     &:before
       content ""
@@ -33,7 +34,7 @@
       position absolute
       left 0
       top 0
-      border-top 60px solid black
+      border-top 50px solid black
       border-right 32px solid transparent
     .c-header__border
       background black
@@ -46,26 +47,91 @@
         top 0
         border-top 6px solid $col-athens-grey
         border-right 3px solid transparent
-    ul
+    &>ul
       display flex
-      padding-left 20px
+      // padding-left 20px
       position absolute
-      top calc(50% - 7px)
-      transform translateY(-50%)
-      li
+      width 100%
+      &>li
         list-style-type none
         color $col-delta
+        position relative
+        height 50px
+        line-height 12px
+        width 24%
+        padding-right 5px
+        text-align center
         a
-          color $col-delta
           font-size 11px
+          color $col-delta
           text-decoration none
-        span
-          vertical-align middle
+        &>a
+          font-weight bold
+          text-decoration none
+          position absolute
+          width 100%
+          left 0
+          top 50%
+          transform translateY(-50%)
+          &:after
+            content ""
+            position absolute
+            width 11px
+            height 5px
+            background url(../img/v2/ic-down-arrow.png)
+            background-position 0 0
+            background-size 100%
+            top 50%
+            transform translateY(-50%)
+            margin-left 2px
+        &:nth-last-of-type(1)
+          &>a
+            &:after
+              margin-left 4px
         &.active
-          a
-            color black
-            font-weight bold
+          &>a
+            color $col-red
             text-decoration none
+            &:after
+              background-position 0 5px
+    &__submenu
+      position absolute
+      top 55px
+      border 1px solid $col-delta
+      line-height 30px
+      background white
+      width 100%
+      display none
+      &.active
+        display block
+      a
+        font-size 10px !important
+      li
+        &:before
+          content ""
+          background url(../img/v2/ic-down-arrow.png)
+          width 11px
+          height 5px
+          background-position 0 0
+          background-size 100%
+          position absolute
+          display block
+          left 50%
+          transform translateX(-50%)
+        &:after
+          content ""
+          width 70%
+          height 1px
+          background $col-delta
+          display block
+          margin auto
+        &:nth-last-of-type(1)
+          &:after
+            height 0
+        &:first-of-type
+          &:before
+            background none
+      
 .isIphone5
   .c-header__menu
     ul

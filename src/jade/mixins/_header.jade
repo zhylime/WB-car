@@ -2,15 +2,14 @@ mixin header()
   header.c-header
     .c-header__logo
       img(src=paths.img + "header-logo.png")
-      .c-header__border
-    .c-header__menu
+      //- .c-header__border
+    .c-header__menu.js-menu
       ul
         each item, index in headerMenu
-          if(index < headerMenu.length - 1)
-            - console.log(index)
-            li.
-              <a href="javascript:void(0);" data-url="#{index+1}">#{item.txt}</a><span>／</span>
-          else
-            li
-              a(href="javascript:void(0);" data-url="3")!= item.txt
-      .c-header__border
+          li
+            a(href="javascript:void(0);", data-url="#{index+1}")!=item.txt
+            ul.c-header__menu__submenu.js-submenu
+              each subitem in item.submenu
+                li.
+                  <a href="javascript:void(0);">#{subitem.txt}</a>
+      //- .c-header__border

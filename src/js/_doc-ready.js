@@ -1,5 +1,4 @@
 $(document).ready(function(){
-  // console.log('doc ready');
   var _page = 1;
   var menu1 = 1,
       menu2 = 35,
@@ -10,6 +9,7 @@ $(document).ready(function(){
   
   var playingVideo = false;
   checkDevice();
+
   loadFlipBook();
   header();
   events();
@@ -110,19 +110,39 @@ $(document).ready(function(){
 			});
 		}
 	}
+  // 导航
   function header(){
-    $('header ul li a').each(function(){
-      $(this).on('click touchend', function(){
-        let _n = $(this).attr('data-url').toString() - 1;
-        _page = menuArray[_n];
-        $('.js-flip-btn').show();
-        $(".js-flip-book").turn("page", _page);
+    $('header ul li a').each(function(i, e){
+      $(this).on('touchstart', function(){
+        let _this = this;
+        // let _n = $(this).attr('data-url').toString() - 1;
+        // _page = menuArray[_n];
+        // $('.js-flip-btn').show();
+        // $(".js-flip-book").turn("page", _page);
         
-        $('.page-wrapper').removeClass('active');
-        $('.page-wrapper[page="' + _page + '"]').addClass('active');
-        updateMenu(_page);
+        // $('.page-wrapper').removeClass('active');
+        // $('.page-wrapper[page="' + _page + '"]').addClass('active');
+        // updateMenu(_page);
+        // submenu
+        $('.js-submenu.active').slideUp(0).removeClass('active');
+        setTimeout(function(){
+          $(_this).next().slideDown(200).addClass('active');
+        }, 200);
+
+       
       });
+
+      
     });
+
+    $(document).on('touchstart', function(e){
+      e.stopPropagation();
+      if($(e.target).parents('.js-menu').length == 0){
+        $('.js-submenu.active').slideUp(0).removeClass('active');
+      }
+      
+
+    })
   }
 
   function events(){
@@ -130,6 +150,8 @@ $(document).ready(function(){
     var endX;
     var distanceX;
     var moving = false;
+
+
      $('body').bind('touchstart',function(e){
         endX = 0;
         startX = 0;
@@ -183,18 +205,19 @@ $(document).ready(function(){
     });
   }
 
+  // 更新top menu状态
   function updateMenu(pageNumber){
     console.log(pageNumber);
     let n = pageNumber;
-    $('header ul li').removeClass('active');
+    $('.js-menu >ul >li').removeClass('active');
     if (n < menu2){
-      $('header ul li:nth-of-type(1)').addClass('active');
+      $('.js-menu > ul > li:nth-of-type(1)').addClass('active');
     }
     else if (n == menu2){
-      $('header ul li:nth-of-type(2)').addClass('active');
+      $('.js-menu > ul > li:nth-of-type(2)').addClass('active');
     }
     else{
-      $('header ul li:nth-of-type(3)').addClass('active');
+      $('.js-menu > ul > li:nth-of-type(3)').addClass('active');
     }
 
   }
@@ -204,5 +227,6 @@ $(document).ready(function(){
       playingVideo = false;
     });
   }
+
 
 });
