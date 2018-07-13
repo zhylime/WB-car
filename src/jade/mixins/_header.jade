@@ -7,9 +7,9 @@ mixin header()
       ul
         each item, index in headerMenu
           li
-            a(href="javascript:void(0);", data-url="#{index+1}")!=item.txt
+            a.js-menu--top-menu--item(href="javascript:void(0);")!=item.txt
             ul.c-header__menu__submenu.js-submenu
               each subitem in item.submenu
                 li.
-                  <a href="javascript:void(0);">#{subitem.txt}</a>
+                  <a href="javascript:void(0);", data-url="#{subitem.link}" class="js-submenu--item">#{subitem.txt}</a>
       //- .c-header__border

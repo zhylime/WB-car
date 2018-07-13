@@ -21,7 +21,7 @@
       background $col-athens-grey
   &__menu
     position absolute
-    padding 0 0 0 10px
+    // padding 0 0 0 1%
     background $col-athens-grey
     right 0
     top 0
@@ -49,7 +49,7 @@
         border-right 3px solid transparent
     &>ul
       display flex
-      // padding-left 20px
+      padding-left 5%
       position absolute
       width 100%
       &>li
@@ -84,10 +84,10 @@
             top 50%
             transform translateY(-50%)
             margin-left 2px
-        &:nth-last-of-type(1)
-          &>a
-            &:after
-              margin-left 4px
+        // &:nth-last-of-type(1)
+        //   &>a
+        //     &:after
+        //       margin-left 12px
         &.active
           &>a
             color $col-red
@@ -105,7 +105,9 @@
       &.active
         display block
       a
-        font-size 10px !important
+        // font-size 10px !important
+        &.active
+          color $col-red
       li
         &:before
           content ""
