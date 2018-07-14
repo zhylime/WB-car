@@ -979,6 +979,9 @@ li {
   left: 50%;
   transform: translateX(-50%);
 }
+.fancybox-opened .fancybox-skin {
+  box-shadow: none;
+}
 .flip-book {
   background-color: #fff;
   margin: auto;
@@ -1340,7 +1343,7 @@ li {
   left: 0;
   top: 0;
   border-top: 50px solid #000;
-  border-right: 32px solid transparent;
+  border-right: 25px solid transparent;
 }
 .c-header__menu .c-header__border {
   background: #000;
@@ -1451,7 +1454,7 @@ li {
 .isIphone5 .c-header__menu ul li a {
   font-size: 8px;
 }
-#p2 ul {
+.c-secret ul {
   margin: auto;
   display: flex;
   flex-wrap: wrap;
@@ -1460,70 +1463,70 @@ li {
   position: absolute;
   top: 68%;
 }
-#p2 ul li {
+.c-secret ul li {
   width: 32%;
   height: 80px;
   margin-bottom: 5px;
 }
-#p2 ul li:nth-of-type(1) {
-  background: url("../img/v2/s2-9.jpg");
+.c-secret ul li:nth-of-type(1) {
+  background: url("../img/v2/s3-9.jpg");
   background-size: auto 100%;
 }
-#p2 ul li:nth-of-type(2) {
-  background: url("../img/v2/s2-8.jpg");
+.c-secret ul li:nth-of-type(2) {
+  background: url("../img/v2/s3-8.jpg");
   background-size: auto 100%;
 }
-#p2 ul li:nth-of-type(3) {
-  background: url("../img/v2/s2-7.jpg");
+.c-secret ul li:nth-of-type(3) {
+  background: url("../img/v2/s3-7.jpg");
   background-size: auto 100%;
 }
-#p2 ul li:nth-of-type(4) {
-  background: url("../img/v2/s2-6.jpg");
+.c-secret ul li:nth-of-type(4) {
+  background: url("../img/v2/s3-6.jpg");
   background-size: auto 100%;
 }
-#p2 ul li:nth-of-type(5) {
-  background: url("../img/v2/s2-5.jpg");
+.c-secret ul li:nth-of-type(5) {
+  background: url("../img/v2/s3-5.jpg");
   background-size: auto 100%;
 }
-#p2 ul li:nth-of-type(6) {
-  background: url("../img/v2/s2-4.jpg");
+.c-secret ul li:nth-of-type(6) {
+  background: url("../img/v2/s3-4.jpg");
   background-size: auto 100%;
 }
-#p2 ul li:nth-of-type(7) {
-  background: url("../img/v2/s2-3.jpg");
+.c-secret ul li:nth-of-type(7) {
+  background: url("../img/v2/s3-3.jpg");
   background-size: auto 100%;
 }
-#p2 ul li:nth-of-type(8) {
-  background: url("../img/v2/s2-2.jpg");
+.c-secret ul li:nth-of-type(8) {
+  background: url("../img/v2/s3-2.jpg");
   background-size: auto 100%;
 }
-#p2 ul li:nth-of-type(9) {
-  background: url("../img/v2/s2-1.jpg");
+.c-secret ul li:nth-of-type(9) {
+  background: url("../img/v2/s3-1.jpg");
   background-size: auto 100%;
 }
-.isIphone5 #p2 li {
+.isIphone5 .c-secret li {
   height: 70px;
 }
-.isIphoneX #p2 ul {
-  top: 60%;
+.isIphoneX .c-secret ul {
+  top: 65%;
 }
 .c-v2-s5-1,
 .c-v2-s5-2,
 .c-v2-s5-3,
 .c-v2-s5-4 {
-  left: 15%;
+  left: 10%;
 }
 .c-v2-s5-1 {
-  top: 15%;
+  top: 17%;
 }
 .c-v2-s5-2 {
   top: 27%;
 }
 .c-v2-s5-3 {
-  top: 39%;
+  top: 37%;
 }
 .c-v2-s5-4 {
-  top: 53%;
+  top: 50%;
 }
 .c-v2-s6,
 .c-v2-s7,
@@ -1553,14 +1556,14 @@ li {
   left: 10%;
   top: 51%;
 }
-.c-v2-s22 {
-  position: relative;
-  top: 50px;
-}
 .c-v2-s16 {
   position: relative;
   top: 50px;
-top
+}
+.c-v2-s16-1,
+.c-v2-s16-2,
+.c-v2-s16-3 {
+  top: 0;
 }
 .c-v2-s16-1 {
   left: 11%;
@@ -1573,6 +1576,15 @@ top
 .c-v2-s16-3 {
   left: 65%;
   width: 25%;
+}
+.c-v2-s22 {
+  position: relative;
+  top: 50px;
+}
+.c-v2-s22-1,
+.c-v2-s22-2,
+.c-v2-s22-3 {
+  top: 0;
 }
 .c-v2-s22-1 {
   left: 11%;
@@ -1656,6 +1668,14 @@ top
   width: 82%;
   left: 9%;
 }
+.c-v2-s51 a {
+  display: none;
+}
+.c-v2-s51 a.c-v2-s51-1,
+.c-v2-s51 a.c-v2-s51-2,
+.c-v2-s51 a.c-v2-s51-3 {
+  display: block;
+}
 .c-v2-return-btn {
   background: url("../img/v2/ic-return-2.png");
   background-size: cover;
@@ -1665,6 +1685,27 @@ top
   bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
+}
+.c-v2-tab {
+  position: absolute;
+  bottom: 12%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.c-v2-tab li {
+  width: 40px;
+  height: 40px;
+  background: #747675;
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+  line-height: 40px;
+  margin: 0 5px 0;
+  cursor: pointer;
+}
+.c-v2-tab li.active {
+  color: #000;
 }
 .bw-video {
   width: 7%;
@@ -1699,8 +1740,7 @@ top
   bottom: 10%;
   left: 12%;
   font-size: 10px;
-  color: #dcdddd;
-  text-shadow: 1px 1px 1px #000;
+  color: #000;
 }
 #p23 .video-note {
   bottom: 20%;

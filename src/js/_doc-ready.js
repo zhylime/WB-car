@@ -1,19 +1,14 @@
 $(document).ready(function(){
   var _page = 1;
-  var menu1 = 1,
-      menu2 = 12,
-      menu3 = 37,
-      menu4 = 49;
-  var maxPage = 55;
+  var menu1 = 2,
+      menu2 = 8,
+      menu3 = 18,
+      menu4 = 30;
+  var maxPage = 36;
   var menuArray = [menu1, menu2, menu3, menu4];
-  var submenuAry5 = [5, 6, 7, 8],
-      submenuAry9 = [9, 10, 11],
-      submenuAry14 = [14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26],
-      submenuAry27 = [27, 28],
-      submenuAry29 = [29, 30, 31, 32],
-      submenuAry33 = [33, 34, 35, 36],
-      submenuAry38 = [38, 39, 40, 41, 42, 43, 44, 45, 46],
-      submenuAry51 = [51, 54];
+  var submenuAry10 = [10, 11, 12, 13],
+      submenuAry14 = [14, 15],
+      submenuAry19 = [19, 20, 21, 22, 23, 24, 25, 26, 27];
 
   
 
@@ -25,6 +20,8 @@ $(document).ready(function(){
   header();
   events();
   pageLink();
+  tabSwitch();
+  
   
   function checkDevice(){
     var deviceInfo = device();
@@ -85,6 +82,7 @@ $(document).ready(function(){
 						}else {
 							$('.js-flip-btn').show();
 						}
+
 						$(".fancybox").fancybox({
 							closeBtn: false,
 							openEffect: 'elastic',
@@ -97,13 +95,13 @@ $(document).ready(function(){
 							helpers : {
 								overlay : {
 									css : {
-										'background' : 'rgba(255, 255, 255, 0.95)'
+										'background' : '#d0d0d0'
 									}
 								}
 							},
 							afterLoad: function(current, previous){
                 $('.fancybox-wrap').after('<div class="fancybox-close"></div>');
-								$('.fancybox-close').on('click touchend', function(e){
+								$('.fancybox-close, .fancybox-overlay').on('click touchend', function(e){
 									$.fancybox.close();
                   $('.fancybox-close').remove();
 
@@ -133,14 +131,6 @@ $(document).ready(function(){
     $('.js-menu--top-menu--item').each(function(i, e){
       $(this).on('touchstart', function(){
         let _this = this;
-        // let _n = $(this).attr('data-url').toString() - 1;
-        // _page = menuArray[_n];
-        // $('.js-flip-btn').show();
-        // $(".js-flip-book").turn("page", _page);
-        
-        // $('.page-wrapper').removeClass('active');
-        // $('.page-wrapper[page="' + _page + '"]').addClass('active');
-        // updateMenu(_page);
         $('.js-submenu.active').slideUp(0).removeClass('active');
         setTimeout(function(){
           $(_this).next().slideDown(200).addClass('active');
@@ -155,8 +145,6 @@ $(document).ready(function(){
         let _this = this;
         let _n = $(this).attr('data-url').toString();
         _page = _n;
-        // $('.js-submenu--item.active').removeClass('active');
-        // $(this).addClass('active');
         $('.js-flip-btn').show();
         $('.js-flip-book').turn('page', _page);
         $('.page-wrapper').removeClass('active');
@@ -257,32 +245,15 @@ $(document).ready(function(){
 
     // submenu
     $('.js-submenu--item.active').removeClass('active');
-    // console.log(submenuAry13.indexOf(n)>=0);
-    if(submenuAry5.indexOf(n)>=0){
-      $('.js-submenu--item[data-url="5"]').addClass('active')
-    }
-    else if(submenuAry9.indexOf(n)>=0){
-      $('.js-submenu--item[data-url="9"]').addClass('active')
+    if(submenuAry10.indexOf(n)>=0){
+      $('.js-submenu--item[data-url="10"]').addClass('active')
     }
     else if(submenuAry14.indexOf(n)>=0){
       $('.js-submenu--item[data-url="14"]').addClass('active')
     }
-    else if(submenuAry27.indexOf(n)>=0){
-      $('.js-submenu--item[data-url="27"]').addClass('active')
+    else if(submenuAry19.indexOf(n)>=0){
+      $('.js-submenu--item[data-url="19"]').addClass('active')
     }
-    else if(submenuAry29.indexOf(n)>=0){
-      $('.js-submenu--item[data-url="29"]').addClass('active')
-    }
-    else if(submenuAry33.indexOf(n)>=0){
-      $('.js-submenu--item[data-url="33"]').addClass('active')
-    }
-    else if(submenuAry38.indexOf(n)>=0){
-      $('.js-submenu--item[data-url="38"]').addClass('active')
-    }
-    else if(submenuAry51.indexOf(n)>=0){
-      $('.js-submenu--item[data-url="51"]').addClass('active')
-    }
-    
     else if(menuArray.indexOf(n)>=0){
       $('.js-submenu--item.active').removeClass('active')
     }
@@ -307,6 +278,17 @@ $(document).ready(function(){
       $('.page-wrapper').removeClass('active');
       $('.page-wrapper[page="' + _page + '"]').addClass('active');
       updateMenu(_page);
+    })
+  }
+
+  function tabSwitch(){
+    $(document).on('touchstart', '.js-tab-control', function(e){
+      e.stopPropagation();
+      let n = $(this).attr('tab-index');
+      $('.js-tab-control').removeClass('active');
+      $(this).addClass('active');
+      $('.js-tab-content a').hide();
+      $('.js-tab-content a[data-tab="' + n + '"]').show();
     })
   }
 

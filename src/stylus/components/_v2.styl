@@ -4,15 +4,16 @@
     &-2
     &-3
     &-4
-      left 15%
+      left 10%
     &-1
-      top 15%
+      top 17%
     &-2
       top 27%
     &-3
-      top 39%
+      top 37%
     &-4
-      top 53%
+      top 50%
+
   &-s6
   &-s7
   &-s8
@@ -36,12 +37,14 @@
   &-s9
     left 10%
     top 51%
-  &-s22
-    position relative
-    top 50px
+  
   &-s16
     position relative
     top 50px
+    &-1
+    &-2
+    &-3
+      top 0
     &-1
       left 11%
       width 25%
@@ -51,8 +54,13 @@
     &-3
       left 65%
       width 25%
-    top
   &-s22
+    position relative
+    top 50px
+    &-1
+    &-2
+    &-3
+      top 0
     &-1
       left 11%
       width 25%
@@ -120,6 +128,12 @@
     top 24%
     width 82%
     left 9%
+    a
+      display none
+      &.c-v2-s51-1
+      &.c-v2-s51-2
+      &.c-v2-s51-3
+        display block
   &-return-btn
     background url('../img/v2/ic-return-2.png')
     background-size cover
@@ -129,6 +143,25 @@
     bottom 10px
     left 50%
     transform translateX(-50%)  
+  &-tab
+    position absolute
+    bottom 12%
+    display flex
+    justify-content center
+    width 100%
+    li
+      width 40px
+      height 40px
+      background $col-dark-grey
+      color white
+      font-size 12px
+      text-align center
+      line-height 40px
+      margin 0 5px 0
+      cursor pointer
+      &.active
+        color black
+  
   // &-return-btn
   //   background url('../img/v2/ic-return.png')
   //   background-size cover
