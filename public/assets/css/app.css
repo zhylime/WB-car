@@ -1508,7 +1508,7 @@ li {
   height: 70px;
 }
 .isIphoneX .c-secret ul {
-  top: 65%;
+  top: 63%;
 }
 .c-v2-s5-1,
 .c-v2-s5-2,
@@ -1688,7 +1688,7 @@ li {
 }
 .c-v2-tab {
   position: absolute;
-  bottom: 12%;
+  bottom: 10%;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -1706,6 +1706,9 @@ li {
 }
 .c-v2-tab li.active {
   color: #000;
+}
+.isIphoneX .c-v2-tab {
+  bottom: 20%;
 }
 .bw-video {
   width: 7%;
