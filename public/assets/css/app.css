@@ -1464,8 +1464,8 @@ li {
   top: 68%;
 }
 .c-secret ul li {
-  width: 70px;
-  height: 70px;
+  width: 74px;
+  height: 74px;
   margin-bottom: 5px;
   background-repeat: no-repeat !important;
 }
@@ -1515,6 +1515,9 @@ li {
 .isIphone7P .c-secret ul {
   top: 70%;
 }
+.isAndroid .c-secret ul {
+  top: 72%;
+}
 .c-v2-s5-1,
 .c-v2-s5-2,
 .c-v2-s5-3,
@@ -1531,7 +1534,7 @@ li {
   top: 37%;
 }
 .c-v2-s5-4 {
-  top: 50%;
+  top: 48%;
 }
 .c-v2-s6,
 .c-v2-s7,

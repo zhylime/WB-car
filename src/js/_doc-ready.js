@@ -162,6 +162,11 @@ $(document).ready(function(){
         $('.js-submenu.active').slideUp(0).removeClass('active');
       }
     })
+
+    $('.js-go-page1').on('click', function(e){
+      e.stopPropagation();
+      $('.js-flip-book').turn('page', 1);
+    })
   }
 
   function events(){

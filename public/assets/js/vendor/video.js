@@ -36,11 +36,11 @@ $(document).ready(function() {
 	}
 	/*
 	 *  视频事件监听事件
-	 * 
+	 *
 	 * 	@eventName 视频事件名称
 	 *  @m	视频对象
 	 * 	@fun 回调函数
-	 * 
+	 *
 	 */
 	var eventTester = function(eventName, m, fun) {
 		if(window.addEventListener) {
@@ -61,7 +61,7 @@ $(document).ready(function() {
 	}
 	/*
 	 *  视频播放
-	 * 
+	 *
 	 */
 	//视频播放
 	$(".m-video").on("click", function() {
@@ -349,7 +349,7 @@ $(document).ready(function() {
 		});
 		/*
 		 * 播放暂停切换
-		 * 
+		 *
 		 * */
 		$(".video-bofang,.video-video").on("click", function(e) {
 			if(IsPC() || e.currentTarget.classList[0] == "video-bofang" || e.target.classList[0] == "video-bofang") {
@@ -374,7 +374,7 @@ $(document).ready(function() {
 		});
 		/*
 		 * 双击全屏
-		 * 
+		 *
 		 * */
 		$(".video-video").on("dblclick", function() {
 			if(IsPC()) {
@@ -389,7 +389,7 @@ $(document).ready(function() {
 		/*
 		 *
 		 *  鼠标移入隐藏UI
-		 * 
+		 *
 		 * */
 		$(".video-ui").on("mouseleave", function() {
 			clearTimeout(iteme);
@@ -405,7 +405,7 @@ $(document).ready(function() {
 		/*
 		 *
 		 *  关闭video
-		 * 
+		 *
 		 * */
 		$(".video-close").on("click touchstart", function() {
 			videobox.remove();
@@ -436,7 +436,7 @@ $(document).ready(function() {
 			$(".video-progress-hover", videobox).css({
 				"width": (wb * 100) + "%"
 			});
-			$(".video-text", videobox).html(addzero(parseInt(tt / 60)) + ":" + addzero(parseInt(tt % 60)));
+			//$(".video-text", videobox).html(addzero(parseInt(tt / 60)) + ":" + addzero(parseInt(tt % 60)));
 		});
 		$(".video-progress", videobox).on("click touchstart touchend", function(e) {
 			videobox.removeClass("video-playing");
@@ -514,7 +514,7 @@ $(document).ready(function() {
 		/*
 		 *  全屏结尾
 		 */
-		
+
 		/*
 		 *  切换清晰度
 		 */
