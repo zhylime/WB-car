@@ -35,7 +35,7 @@ $(document).ready(function () {
       if (screen.height == 812 && screen.width == 375) {
         return 'isIphoneX';
       } else if (screen.height == 736 && screen.width == 414) {
-        console.log("iPhone7P - iPhone8P - iPhone6");
+        return 'isIphone7P';
       } else if (screen.height == 667 && screen.width == 375) {
         console.log("iPhone7 - iPhone8 - iPhone6");
       } else if (screen.height == 568 && screen.width == 320) {

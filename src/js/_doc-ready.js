@@ -10,9 +10,9 @@ $(document).ready(function(){
       submenuAry14 = [14, 15],
       submenuAry19 = [19, 20, 21, 22, 23, 24, 25, 26, 27];
 
-  
 
-  
+
+
   var playingVideo = false;
   checkDevice();
 
@@ -21,8 +21,8 @@ $(document).ready(function(){
   events();
   pageLink();
   tabSwitch();
-  
-  
+
+
   function checkDevice(){
     var deviceInfo = device();
     $('html').addClass(deviceInfo);
@@ -38,7 +38,7 @@ $(document).ready(function(){
       if(screen.height == 812 && screen.width == 375){
           return 'isIphoneX'
       }else if(screen.height == 736 && screen.width == 414){
-          console.log("iPhone7P - iPhone8P - iPhone6");
+          return 'isIphone7P'
       }else if(screen.height == 667 && screen.width == 375){
           console.log("iPhone7 - iPhone8 - iPhone6");
       }else if(screen.height == 568 && screen.width == 320){
@@ -48,7 +48,7 @@ $(document).ready(function(){
       }
     }else if(events.indexOf('Windows Phone')>-1){
             // console.log("诺基亚手机");
-            
+
     }else if(events.indexOf("iPad")>-1){
             // console.log("平板");
     }
@@ -152,7 +152,7 @@ $(document).ready(function(){
         updateMenu(_n);
         $('.js-submenu.active').slideUp(0).removeClass('active');
       });
-      
+
     });
 
     // close submenu
@@ -194,8 +194,8 @@ $(document).ready(function(){
           // distanceY = endY-startY;
           //判断滑动方向
         }
-        
-        
+
+
       });
     $('body').bind("touchend", function(e){
       // console.log("startX:" + startX);
@@ -209,14 +209,14 @@ $(document).ready(function(){
             $(".js-flip-book").turn('next');
         }
       }
-      
+
     });
     $('.js-flip-btn').on('click touchend', function(e){
       e.preventDefault();
       _page++;
       $(this).hide();
       $(".js-flip-book").turn('next');
-      
+
       updateMenu(_page);
       if(_page !== 38){
         $(this).fadeIn();
