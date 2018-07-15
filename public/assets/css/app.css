@@ -966,6 +966,10 @@ li {
   top: 50%;
   transform: translateY(-60%);
 }
+.l-bottom {
+  position: absolute;
+  bottom: 5px;
+}
 .fancybox-skin {
   background-color: #fff;
 }
