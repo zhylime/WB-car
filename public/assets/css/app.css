@@ -1516,6 +1516,9 @@ li {
   height: 65px;
   width: 65px;
 }
+.isIphoneX .c-secret-bottom {
+  top: 80%;
+}
 .isIphoneX .c-secret ul {
   top: 63%;
 }
@@ -1679,7 +1682,7 @@ li {
   margin: auto;
 }
 .c-v2-s51 {
-  top: 24%;
+  top: 22%;
   width: 82%;
   left: 9%;
 }
@@ -1697,7 +1700,7 @@ li {
   width: 100px;
   height: 34px;
   position: absolute;
-  bottom: 10px;
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -1726,14 +1729,17 @@ li {
   padding-top: 50px;
 }
 .c-v2-last-bottom {
-  width: 70%;
-  margin-left: 15%;
+  width: 64%;
+  margin-left: 18%;
 }
 .c-v2-last .qr-img {
   margin-top: 15px;
 }
 .isIphoneX .c-v2-tab {
   bottom: 18%;
+}
+.isIphoneX .c-v2-return-btn {
+  bottom: 30px;
 }
 .bw-video {
   width: 7%;
