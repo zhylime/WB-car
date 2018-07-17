@@ -4,13 +4,12 @@ $(document).ready(function () {
   var _page = 1;
   var menu1 = 2,
       menu2 = 8,
-      menu3 = 18,
-      menu4 = 30;
+      menu3 = 17,
+      menu4 = 29;
   var maxPage = 36;
   var menuArray = [menu1, menu2, menu3, menu4];
   var submenuAry10 = [10, 11, 12, 13],
-      submenuAry14 = [14, 15],
-      submenuAry19 = [19, 20, 21, 22, 23, 24, 25, 26, 27];
+      submenuAry18 = [18, 19, 20, 21, 22, 23, 24, 25, 26];
 
   var playingVideo = false;
   checkDevice();
@@ -238,9 +237,7 @@ $(document).ready(function () {
     $('.js-submenu--item.active').removeClass('active');
     if (submenuAry10.indexOf(n) >= 0) {
       $('.js-submenu--item[data-url="10"]').addClass('active');
-    } else if (submenuAry14.indexOf(n) >= 0) {
-      $('.js-submenu--item[data-url="14"]').addClass('active');
-    } else if (submenuAry19.indexOf(n) >= 0) {
+    } else if (submenuAry18.indexOf(n) >= 0) {
       $('.js-submenu--item[data-url="19"]').addClass('active');
     } else if (menuArray.indexOf(n) >= 0) {
       $('.js-submenu--item.active').removeClass('active');

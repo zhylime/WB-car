@@ -1456,7 +1456,10 @@ li {
   background: none;
 }
 .isIphone5 .c-header__menu ul li a {
-  font-size: 8px;
+  font-size: 8px !important;
+}
+.c-secret-bottom {
+  top: 88%;
 }
 .c-secret ul {
   margin: auto;
@@ -1718,6 +1721,16 @@ li {
 }
 .c-v2-tab li.active {
   color: #000;
+}
+.c-v2-last {
+  padding-top: 50px;
+}
+.c-v2-last-bottom {
+  width: 70%;
+  margin-left: 15%;
+}
+.c-v2-last .qr-img {
+  margin-top: 15px;
 }
 .isIphoneX .c-v2-tab {
   bottom: 18%;
