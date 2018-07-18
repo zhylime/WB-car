@@ -272,7 +272,7 @@ $(document).ready(function(){
   }
 
   function pageLink(){
-    $(document).on('click touchstart', '.js-has-link', function(){
+    $(document).on('click touchend', '.js-has-link', function(){
       let n = $(this).attr('data-url');
       _page = n;
       $('.js-flip-book').turn('page', _page);

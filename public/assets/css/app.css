@@ -909,6 +909,9 @@
 .bg-silver-grey {
   background: #c2c2c2 !important;
 }
+.bg-geyser-grey {
+  background: #cfcfd1 !important;
+}
 html,
 body,
 * {
@@ -1459,7 +1462,7 @@ li {
   font-size: 8px !important;
 }
 .c-secret-bottom {
-  top: 88%;
+  top: 90%;
 }
 .c-secret ul {
   margin: auto;
@@ -1468,7 +1471,7 @@ li {
   margin-left: 15%;
   justify-content: space-around;
   position: absolute;
-  top: 68%;
+  top: 70%;
 }
 .c-secret ul li {
   width: 74px;
@@ -1616,14 +1619,20 @@ li {
   left: 65%;
   width: 25%;
 }
+.c-v2-s22-bottom {
+  margin-top: -22px;
+}
+.c-v2-s22-bottom .no-opacity {
+  opacity: 0;
+}
 .c-v2-s29 {
-  width: 30%;
-  left: 35%;
+  width: 20%;
+  left: 40%;
   top: 87%;
 }
 .c-v2-s33 {
-  width: 30%;
-  left: 35%;
+  width: 20%;
+  left: 40%;
   bottom: -10%;
 }
 .c-v2-s38-0 {
