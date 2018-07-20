@@ -10,6 +10,7 @@ $(document).ready(function () {
   var menuArray = [menu1, menu2, menu3, menu4];
   var submenuAry10 = [10, 11, 12, 13],
       submenuAry18 = [18, 19, 20, 21, 22, 23, 24, 25, 26];
+  var sign;
 
   var playingVideo = false;
   checkDevice();
@@ -19,6 +20,8 @@ $(document).ready(function () {
   events();
   pageLink();
   tabSwitch();
+  // getAPI();
+
 
   function checkDevice() {
     var deviceInfo = device();
@@ -256,7 +259,9 @@ $(document).ready(function () {
     $(document).on('click touchend', '.js-has-link', function () {
       var n = $(this).attr('data-url');
       _page = n;
+
       $('.js-flip-book').turn('page', _page);
+      $("#flipbook").turn("disable", true);
       $('.page-wrapper').removeClass('active');
       $('.page-wrapper[page="' + _page + '"]').addClass('active');
       updateMenu(_page);
@@ -271,6 +276,57 @@ $(document).ready(function () {
       $(this).addClass('active');
       $('.js-tab-content a').hide();
       $('.js-tab-content a[data-tab="' + n + '"]').show();
+    });
+  }
+  function EncodeUtf8(s1) {
+    var s = escape(s1);
+    var sa = s.split("%");
+    var retV = "";
+    if (sa[0] != "") {
+      retV = sa[0];
+    }
+    for (var i = 1; i < sa.length; i++) {
+      if (sa[i].substring(0, 1) == "u") {
+        retV += Hex2Utf8(Str2Hex(sa[i].substring(1, 5)));
+      } else retV += "%" + sa[i];
+    }
+    // retV.replace('/', '%2F');
+
+    return retV;
+  }
+  function getAPI() {
+    var _appKey = '43278dfjewo798djirf32dhie82ejfh8';
+    // var _requestid = (new Date()).getTime();
+    var _requestid = 1531982478190;
+    var _secretKey = 'c89493ee0989a2cb84a575fb4cb472ea';
+    var _path = '/api/getToken';
+    var _sign = _path + '_appkey=' + _appKey + '_requestid=' + _requestid + '_' + _secretKey;
+    var reg = /\//g;
+    // console.log('tdata-bus/serviceA_ appkey=1234567890_ requestid =1519374074000_abcdefghijklmnopqrstuvwx');
+    // _sign = str2utf8('tdata-bus/serviceA_appkey=1234567890_requestid=1519374074000_abcdefghijklmnopqrstuvwx');
+    _sign = EncodeUtf8(_sign);
+    // console.log("encodeUTF8:" + _sign.replace(reg, 
+    //   '%2F'));
+    _sign = $.md5(_sign.replace(reg, '%2F'));
+    // console.log('http://cm.cmp.borgward.com.cn/portal/api/getToken?appkey=' + _appKey + '&sign=' + _sign + '&requestid=' + _requestid + '&interfaceType=APP')
+    // console.log("md5: " + _sign);
+    $.ajax({
+      url: 'http://cm.cmp.borgward.com.cn/portal/api/getToken?appkey=' + _appKey + '&sign=' + _sign + '&requestid=' + _requestid + '&interfaceType=APP',
+      type: 'POST',
+      dataType: 'json',
+      contentType: "application/json",
+      success: function success(data) {
+        // console.log(data)
+        wx.config({
+          debug: true,
+          appId: _appKey,
+          timestamp: _requestid,
+          nonceStr: _sign
+        });
+      },
+      error: function error(data) {
+        console.log(data.responseText);
+      }
     });
   }
 });

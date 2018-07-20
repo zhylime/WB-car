@@ -1619,9 +1619,6 @@ li {
   left: 65%;
   width: 25%;
 }
-.c-v2-s22-bottom {
-  margin-top: -22px;
-}
 .c-v2-s22-bottom .no-opacity {
   opacity: 0;
 }
@@ -1674,7 +1671,7 @@ li {
 }
 .c-v2-s50-5,
 .c-v2-s50-6 {
-  width: 20%;
+  width: 36%;
   top: 22%;
 }
 .c-v2-s50-6 {
@@ -1787,5 +1784,4 @@ li {
 }
 #p23 .video-note {
   bottom: 22%;
-  left: 7%;
 }
