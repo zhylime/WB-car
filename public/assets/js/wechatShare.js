@@ -2,8 +2,8 @@
  * 前端单独的微信分享签名
  */
 var shareApi = "http://xsbj.borgward.com.cn/xsbj/borgward_wxshare.php?env=prod";
-var appMessageTitle = "宝沃圣经 (V2.0)";
-var timelineTitle = "宝沃圣经 (V2.0)";
+var appMessageTitle = "宝沃圣经 (V2.1)";
+var timelineTitle = "宝沃圣经 (V2.1)";
 var shareDesc = "读宝沃圣经，领略汽车真谛！";
 var appMessageLink = 'http://h5.borgward.com.cn/bible/index.html';
 var timelineLink = 'http://h5.borgward.com.cn/bible/index.html';
@@ -130,7 +130,7 @@ function setImgUrl(type, imgUrl) {
 }
 function ShareWeixin(type, title, desc=null, link=null, imgUrl=null) {
     wx.ready(function() {
-        console.log("wx ready!");
+        // console.log("wx ready!");
         shareDesc = '读宝沃圣经，领略汽车真谛！';
         appMessageImgUrl = "http://h5.borgward.com.cn/bible/assets/img/v2/thumb.jpeg";
         // $("#audio")[0].play();

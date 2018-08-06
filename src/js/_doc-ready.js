@@ -101,7 +101,12 @@ $(document).ready(function(){
 								}
 							},
 							afterLoad: function(current, previous){
-                $('.fancybox-wrap').after('<div class="fancybox-close"></div>');
+                if($(current.element).hasClass('js-no-return')){
+                }
+                else{
+                  $('.fancybox-wrap').after('<div class="fancybox-close"></div>');
+                }
+                
 								$('.fancybox-close, .fancybox-overlay').on('click touchend', function(e){
 									$.fancybox.close();
                   $('.fancybox-close').remove();

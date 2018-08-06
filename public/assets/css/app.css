@@ -1566,7 +1566,16 @@ li {
 .c-v2-s40,
 .c-v2-s42,
 .c-v2-s44 {
-  top: 60%;
+  top: 64%;
+}
+.c-v2-s40-learn-more,
+.c-v2-s42-learn-more,
+.c-v2-s44-learn-more {
+  position: absolute;
+  width: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 59%;
 }
 .c-v2-s20 {
   width: 76%;
@@ -1580,6 +1589,11 @@ li {
 .c-v2-s16 {
   position: relative;
   top: 30px;
+}
+.c-v2-s16 .btn {
+  display: block;
+  margin: 10px auto 0;
+  padding: 0;
 }
 .c-v2-s16-1,
 .c-v2-s16-2,
@@ -1601,6 +1615,11 @@ li {
 .c-v2-s22 {
   position: relative;
   top: 30px;
+}
+.c-v2-s22 .btn {
+  display: block;
+  margin: 10px auto 0;
+  padding: 0;
 }
 .c-v2-s22-1,
 .c-v2-s22-2,
