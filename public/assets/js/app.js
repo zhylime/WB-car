@@ -6,7 +6,7 @@ $(document).ready(function () {
       menu2 = 8,
       menu3 = 17,
       menu4 = 29;
-  var maxPage = 36;
+  var maxPage = 37;
   var menuArray = [menu1, menu2, menu3, menu4];
   var submenuAry10 = [10, 11, 12, 13],
       submenuAry18 = [18, 19, 20, 21, 22, 23, 24, 25, 26];

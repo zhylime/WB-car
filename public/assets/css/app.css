@@ -943,6 +943,18 @@ li {
 .is-btn {
   cursor: pointer;
 }
+.l-w--30p {
+  width: 30%;
+}
+.l-w--40p {
+  width: 40%;
+}
+.l-w--50p {
+  width: 50%;
+}
+.l-w--60p {
+  width: 60%;
+}
 .l-w--70p {
   width: 70%;
 }
@@ -1535,19 +1547,11 @@ li {
 .c-v2-s5-2,
 .c-v2-s5-3,
 .c-v2-s5-4 {
-  left: 10%;
+  margin: 0 auto 10px;
 }
-.c-v2-s5-1 {
-  top: 17%;
-}
-.c-v2-s5-2 {
-  top: 27%;
-}
-.c-v2-s5-3 {
-  top: 37%;
-}
-.c-v2-s5-4 {
-  top: 48%;
+.c-v2-s5-5 {
+  margin: auto;
+  display: flex;
 }
 .c-v2-s6,
 .c-v2-s7,
@@ -1668,6 +1672,16 @@ li {
 }
 .c-v2-s38-5 {
   top: 50px;
+}
+.c-v2-s39-top {
+  position: relative;
+  top: 40px;
+}
+.c-v2-s39-video {
+  position: relative;
+  width: 80%;
+  left: 10%;
+  top: 55px;
 }
 .c-v2-s50-1,
 .c-v2-s50-2,
