@@ -107,7 +107,7 @@ $(document).ready(function(){
                   $('.fancybox-wrap').after('<div class="fancybox-close"></div>');
                 }
                 
-								$('.fancybox-close, .fancybox-overlay').on('click touchend', function(e){
+								$(document).on('click touchend', '.fancybox-close, .fancybox-overlay, .js-close', function(e){
 									$.fancybox.close();
                   $('.fancybox-close').remove();
 
