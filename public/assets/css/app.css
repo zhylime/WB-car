@@ -1595,8 +1595,9 @@ li {
   top: 30px;
 }
 .c-v2-s16 .btn {
+  width: 85%;
   display: block;
-  margin: 10px auto 0;
+  margin: 5px auto 0;
   padding: 0;
 }
 .c-v2-s16-1,
@@ -1621,8 +1622,9 @@ li {
   top: 30px;
 }
 .c-v2-s22 .btn {
+  width: 85%;
   display: block;
-  margin: 10px auto 0;
+  margin: 5px auto 0;
   padding: 0;
 }
 .c-v2-s22-1,
