@@ -1018,6 +1018,9 @@ li {
 .flip-book section a:focus {
   outline: none;
 }
+.flip-video .btn {
+  border-radius: 0;
+}
 .flip-book .page {
   background: #ededed;
 }
@@ -1679,11 +1682,17 @@ li {
   position: relative;
   top: 40px;
 }
-.c-v2-s39-video {
+.c-v2-s39-vids {
   position: relative;
-  width: 80%;
-  left: 10%;
+  width: 84%;
+  left: 8%;
   top: 55px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.c-v2-s39-vid {
+  width: 49%;
 }
 .c-v2-s50-1,
 .c-v2-s50-2,
