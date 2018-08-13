@@ -1001,6 +1001,9 @@ li {
 .fancybox-opened .fancybox-skin {
   box-shadow: none;
 }
+.flip-video .btn{
+  border-radius: 0;
+}
 .flip-book {
   background-color: #fff;
   margin: auto;
